@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import  { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const AnimatedIcon = ({ positionClasses, bgColor, hoverBgColor, onHoverChange, delay, icon, text, link, textTop = '60%', textLeft = '110%' }) => {

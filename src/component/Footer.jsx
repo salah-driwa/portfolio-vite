@@ -7,7 +7,7 @@ import Section from "./Section_animation";
 
 const Footer = () => {
     return ( 
-        <footer className="  relative bg-gray-900" >     
+        <footer className="  relative bg-lightbg " >     
           <div className="mx-auto border-b-2 border-gray-500 w-1/2 sm:mt-36 mt-5 pt-5 h-1"></div>
           
          

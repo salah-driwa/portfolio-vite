@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FaHome, FaInfoCircle, FaStar } from 'react-icons/fa';
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
 import {MdMenu,MdMenuOpen}from 'react-icons/md'
@@ -159,7 +160,7 @@ const Navbar = () => {
         </Link>
 
 
-        <div className="relative inline-block text-left group">
+       {/*     <div className="relative inline-block text-left group">
       <span className="rounded-md shadow-sm">
         <button
           type="button"
@@ -169,7 +170,7 @@ const Navbar = () => {
         </button>
       </span>
 
-      <div className="hidden absolute z-10  space-y-2 bg-white border rounded-md shadow-lg group-hover:block">
+  <div className="hidden absolute z-10  space-y-2 bg-white border rounded-md shadow-lg group-hover:block">
         <button
           onClick={() => handleLanguageChange('en')}
           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
@@ -182,10 +183,10 @@ const Navbar = () => {
         >
           French
         </button>
-        {/* Add more language options as needed */}
+    
       </div>
     </div>
-
+ */}
       </div>
     
 

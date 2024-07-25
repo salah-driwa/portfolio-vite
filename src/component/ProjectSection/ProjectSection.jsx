@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import  { useState } from 'react';
 
 import Carousel from './Carousel';
 import { MdDraw, MdWeb } from 'react-icons/md';
@@ -64,7 +65,7 @@ else  {
   return (
     <div>
      <div className="  flex  justify-start my-12  h-12  mx-3
-       rounded-3xl relative z-0 overflow-hidden bg-[#002647] shadow-md text-white">
+       rounded-3xl relative z-0 overflow-hidden bg-lightbg shadow-md text-white">
      <motion.div 
   initial={{ x: 0 }}
   animate={{ x: slide }}

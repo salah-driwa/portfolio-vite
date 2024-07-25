@@ -16,7 +16,7 @@ export default {
         p1: '#73ffd7',
         primary: '#00eeff',
         secondary: '#ffffff',
-        lightbg: '#002647'
+        lightbg: '#102130'
       },
     },
   },
