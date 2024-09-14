@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { motion } from 'framer-motion';
 import {  MdDraw } from 'react-icons/md';
 import AnimatedIcon from './Bubble';
@@ -91,6 +91,7 @@ function Herosection() {
           onHoverChange={handleHover}
           icon={<FaLaptopCode  size={50} color="white" />} 
           delay={1.2}
+          link={"https://dashboard-exemples.netlify.app/"}
           text="Development"
   textTop="30%"
   textLeft="120%"
