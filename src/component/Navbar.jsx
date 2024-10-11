@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import { FaHome, FaInfoCircle, FaStar } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaMoon, FaStar, FaSun } from 'react-icons/fa';
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
 import {MdMenu,MdMenuOpen}from 'react-icons/md'
 import { Link   } from 'react-scroll';
@@ -44,25 +43,54 @@ const Navbar = () => {
  
     //const {  changeLanguage } = useLanguage();
   
-    const handleLanguageChange = (lng) => {
-    //  changeLanguage(lng);
-      console.log(lng)
-      // You can add additional logic here if needed
+   
+
+
+
+    const [isDark, setIsDark] = useState(false);
+
+  
+    useEffect(() => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setIsDark(savedTheme === 'dark');
+        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+      }
+    }, []);
+  
+    const toggleTheme = () => {
+      const newTheme = isDark ? 'light' : 'dark';
+      setIsDark(!isDark);
+      document.documentElement.classList.toggle('dark', newTheme === 'dark');
+      localStorage.setItem('theme', newTheme);
     };
+  
+
+
+
+
+
+
+
+
+
+
+
+
   return (
 <motion.nav
-    className={`sm:flex sm:items-center justify-between sm:py-4 sm:px-20 align-top text-white bg-[#012D54] sm:border-none border border-gray-300 border-opacity-50
+    className={`sm:flex sm:items-center justify-between sm:py-4 sm:px-20 align-top text-text   sm:border-none border border-gray-300 border-opacity-50
       h-fit text-secondary-button sm:h-20 w-full fixed z-50 `}
     
       initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
       animate={{
-        backgroundColor: isScrolled ? 'rgb(0,38,61, 0.9)' : 'rgba(0, 0, 0, 0)',
+        backgroundColor: isScrolled ? 'var(--accent)' : 'rgba(0, 0, 0, 0)',
         backdropFilter: isScrolled ? 'blur(8px)' : 'none'
       }}
       
       transition={{ duration: 0.3 }}
     >
-    <div className=' flex px-6 py-3  bg-[#012D54] sm:bg-transparent  '>
+    <div className=' flex px-6 py-3  bg-accent sm:bg-transparent  '>
           <Section x={0} y={-40}>
       <Link
         to="home"
@@ -72,7 +100,7 @@ const Navbar = () => {
         onClick={() => setIsHovered({ home: false, about: false, popular: false, explore: false })}
       >
        
-        <h1 className="sm:text-2xl font-bold    text-white">Portfolio</h1>
+        <h1 className="sm:text-2xl font-bold    text-text">Portfolio</h1>
 
       </Link>
       </Section>
@@ -85,6 +113,15 @@ const Navbar = () => {
         </div>
 
       <div className="sm:flex items-center sm:space-x-20 hidden ">
+        
+      <motion.button
+                  whileHover={{ scale: 1.2 ,rotate:360 }}
+              
+                  onClick={toggleTheme}
+                  className={`flex items-center justify-center ${isDark ? 'bg-white' : 'bg-black'} absolute rounded-full w-10 h-10`}
+                >
+                  {isDark ? <FaSun size={26} color="black" /> : <FaMoon size={26} color="white" />}
+                </motion.button>
         {/* Home */}
         <Link
           to="home"
@@ -159,34 +196,8 @@ const Navbar = () => {
           <span>Projects</span>
         </Link>
 
-
-       {/*     <div className="relative inline-block text-left group">
-      <span className="rounded-md shadow-sm">
-        <button
-          type="button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-gray-700 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-        >
-          Language
-        </button>
-      </span>
-
-  <div className="hidden absolute z-10  space-y-2 bg-white border rounded-md shadow-lg group-hover:block">
-        <button
-          onClick={() => handleLanguageChange('en')}
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-        >
-          English
-        </button>
-        <button
-          onClick={() => handleLanguageChange('fr')}
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-        >
-          French
-        </button>
-    
-      </div>
-    </div>
- */}
+         
+      
       </div>
     
 

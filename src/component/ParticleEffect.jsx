@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const generateRandomPosition = () => {
@@ -64,7 +64,7 @@ function ParticleEffect() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className='absolute rounded-full bg-white blur-sm w-full h-full'
+              className='absolute rounded-full bg-text blur-sm w-full h-full'
             />
           </div>
         </motion.div>

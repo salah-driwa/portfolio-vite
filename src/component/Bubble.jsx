@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import  { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -35,7 +36,7 @@ const AnimatedIcon = ({ positionClasses, bgColor, hoverBgColor, onHoverChange, d
   };
 
   const textShadowStyle = {
-    color: '#fff',
+    color: 'text-text',
     textShadow: `
       0 0 7px ${bgColor},
       0 0 10px ${bgColor},
@@ -47,17 +48,7 @@ const AnimatedIcon = ({ positionClasses, bgColor, hoverBgColor, onHoverChange, d
     `
   };
 
-  const borderColorStyle = {
-    border: `0.2rem solid ${bgColor}`,
-    boxShadow: `
-      0 0 0.1rem #fff,
-      0 0 0.2rem #fff,
-      0 0 2rem ${bgColor},
-      0 0 0.8rem ${bgColor},
-      0 0 2.8rem ${bgColor},
-      inset 0 0 1.3rem ${bgColor}
-    `
-  };
+
 
   const handleClick = () => {
     window.open(link, '_blank');
@@ -75,14 +66,19 @@ const AnimatedIcon = ({ positionClasses, bgColor, hoverBgColor, onHoverChange, d
         rotate: isHovered ? 0 : 0 ,
         x: [0, 10, -10, 10, 0],
         y: [0, -30, 15, -30, 0],
+        width: isHovered ? "12rem": "8rem",
+        height: isHovered ? "12rem": "8rem",
         transition: { 
           x: { repeat: Infinity, duration: 8 ,delay:delay },
-          y: { repeat: Infinity, duration: 8, repeatType: "reverse" ,delay:delay }
+          y: { repeat: Infinity, duration: 8, repeatType: "reverse" ,delay:delay },
+          width: { type: "spring", stiffness: 100, damping: 10 },  // Bonus: Add spring animation to width
+      height: { type: "spring", stiffness: 100, damping: 10 }  // Bonus: Add spring animation to height
+ 
         }
       }}
       transition={{ duration: 0.2 ,delay:delay }}
-      className={`h-32 w-32 absolute rounded-full z-10 backdrop-blur-xl flex items-center justify-center ${positionClasses}`}
-      style={{ backgroundColor: bgColor, backdropFilter: 'blur(10px)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.6)', cursor: 'pointer' }}
+      className={` absolute rounded-full flex flex-col z-10 backdrop-blur-xl  items-center justify-center ${positionClasses}`}
+      style={{ backgroundColor: bgColor, transformOrigin: 'center', backdropFilter: 'blur(10px)', boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.6)', cursor: 'pointer' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     > 
@@ -98,21 +94,22 @@ const AnimatedIcon = ({ positionClasses, bgColor, hoverBgColor, onHoverChange, d
       {isHovered && (
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity:isHovered ? 1 :0, scale: 1 ,
-            x:isHovered ? [0, 10, -10, 10, 0] :0  ,
+          animate={{ opacity:isHovered ? 1 :0,
+             scale:isHovered ? 1 :0 ,
+         
    
           }}
-          transition={{ duration: 0.3, ease: [0, 0.71, 0.2, 1.01], scale: {
+          transition={{ duration: 0.3, scale: {
             type: "spring",
             damping: 7,
             stiffness: 100,
             restDelta: 0.001
           }
           }}
-          className='absolute rounded-md py-10   w-64 shadow-md'
-          style={{ top: textTop, left: textLeft, ...borderColorStyle, padding: '0.4em' }}
+          className=' py-10 absolute top-20    h-10'
+     
         >
-          <div className='relative z-10 mx-auto w-full text-center p-2 font-bold text-2xl ' style={textShadowStyle}>
+          <div className='   z-10 mx-auto w-full text-center h-10 font-bold text-2xl ' style={textShadowStyle}>
             {text}
           </div>
         </motion.div>

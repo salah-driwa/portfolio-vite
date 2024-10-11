@@ -9,7 +9,7 @@ function Home() {
 
     return (
 
-    <div className="overflow-x-hidden "> 
+    <div className="overflow-x-hidden  "> 
     <Navbar/>
    
      <header className="relative  overflow-hidden   sm:-top-3 -top-6 sm:block hidden" id='home' >

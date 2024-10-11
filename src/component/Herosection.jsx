@@ -11,50 +11,16 @@ function Herosection() {
   const [isHovered, setIsHovered] = useState(false);
 
 
+  // eslint-disable-next-line no-unused-vars
   const handleHover = (hoverState, text) => {
     setIsHovered(hoverState);
 
   };
 
   return (
-    <div className='min-h-[125vh] flex justify-center relative items-center'>
+    <div className=' xl:min-h-[120vh] h-[100vh] flex justify-center relative items-center'>
       <ParticleEffect/>
-     {/* <motion.div
-        initial={{ scale: 0 }}
-        animate={{ 
-          scale: [0, 1.3, 0.9, 1.1, 1],
-          x: [0, 0, 10, -10, 10, 0],
-          y: [-30, 0, -30, 15, -30, 0],
-          width: isHovered ? '500px' : '240px',
-          borderRadius: isHovered ? '60px' : '400px',
-          transition: { 
-            x: { repeat: Infinity, duration: 8 },
-            y: { repeat: Infinity, duration: 8, repeatType: 'reverse' }
-          }
-        }}
-        transition={{ duration: 2, bounce: 50 }}
-        className='h-60 w-60 absolute top-1/3 rounded-full bg-gray-100 z-20'
-      >
-        {isHovered && (
-          <div className='absolute text-center w-full font-extrabold z-40 text-3xl top-14 bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent'>
-            {hoveredText}
-          </div>
-        )}
-        <motion.div
-          initial={{ scale: 1 }}
-          animate={{ 
-            opacity: 0.4,
-            width: isHovered ? '500px' : '240px',
-            borderRadius: isHovered ? '60px' : '400px',
-            transition: { 
-              x: { repeat: Infinity, duration: 8 },
-              y: { repeat: Infinity, duration: 8, repeatType: 'reverse' }
-            }
-          }}
-          transition={{ duration: 2, bounce: 50 }}
-          className='h-60 w-60 rounded-full bg-gray-100 z-10 blur-xl'
-        ></motion.div>
-      </motion.div>*/}
+   
       <motion.div
         initial={{ scale: 0 }}
         animate={{ 
@@ -68,7 +34,7 @@ function Herosection() {
           }
         }}
         transition={{ duration: 1, bounce: 50 }}
-      className=' absolute top-1/2 text-3xl text-white  z-20 font-extrabold'>
+      className=' absolute top-1/2 text-3xl text-text  z-20 font-extrabold'>
        Looking for ?
       </motion.div>
       <div className=''>
@@ -77,7 +43,7 @@ function Herosection() {
           bgColor={"RGB(5 ,73 ,254, 0.5)"} 
           hoverBgColor={"RGB(5 ,73 ,254)"} 
           onHoverChange={handleHover}
-          icon={<FiPenTool  size={50} color='white'/> }
+          icon={<FiPenTool  size={50} classname="text-text"/> }
           delay={0}
           link={"https://truedarkanimations.netlify.app/"}
           text="Designs"
@@ -89,7 +55,7 @@ function Herosection() {
           bgColor="rgba(255, 11, 115, 0.5)" 
           hoverBgColor="rgba(255, 11, 115, 1)" 
           onHoverChange={handleHover}
-          icon={<FaLaptopCode  size={50} color="white" />} 
+          icon={<FaLaptopCode  size={50} classname="text-text" />} 
           delay={1.2}
           link={"https://dashboard-exemples.netlify.app/"}
           text="Development"
@@ -101,7 +67,7 @@ function Herosection() {
           bgColor="rgba(10, 241, 226, 0.5)" 
           hoverBgColor="rgba(10, 241, 226, 1)" 
           onHoverChange={handleHover}
-          icon={<MdDraw  size={50} color="white" />} 
+          icon={<MdDraw  size={50} classname="text-text" />} 
           delay={3}
           text="Illustration"
             textTop="110%"
@@ -112,7 +78,7 @@ function Herosection() {
           bgColor="rgba(177, 8, 242, 0.5)" 
           hoverBgColor="rgba(177, 8, 242, 1)" 
           onHoverChange={handleHover}
-          icon={<FaGamepad size={50} color="white" />} 
+          icon={<FaGamepad size={50} classname="text-text" />} 
           delay={2}
           text="Games"
              textTop="-80%"

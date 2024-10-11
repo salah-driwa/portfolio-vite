@@ -17,10 +17,9 @@ const Description = () => {
           y: { repeat: Infinity, duration: 8, repeatType: "loop"  }
         }
       }}
-      transition={{ duration: 0.5 }} className=" mx-auto h-96  w-[390px]  rounded-full">
-          <div className=" bg-white h-96  w-[390px]   rounded-full absolute"></div>
-          <div className=" bg-white h-96  w-[390px] blur-xl opacity-40  rounded-full absolute"></div>
-          <div className=" w-full h-full pt-22">
+      transition={{ duration: 0.5 }} className=" mx-auto xl:h-96   xl:w-[390px]   h-56   w-56 rounded-full">
+          <div className=" bg-gray-300 dark:bg-white xl:h-96  xl:w-[390px] h-56   w-56  rounded-full absolute"></div>
+            <div className=" w-full h-full pt-22">
           <Button />
           </div>
         </motion.div>

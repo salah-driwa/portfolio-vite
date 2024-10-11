@@ -31,11 +31,11 @@ const Content = () => {
            <Description/>
         </Section>  
         <h1 className='text-center text-secondary font-bold font-mono text-3xl uppercase pb-10'> Click to Interact</h1>
-      <section className='flex flex-col justify-evenly mx-3 gap-8 md:flex-row xl:mx-80 mb-5'>
+      <section className='flex  justify-center items-center mx-3 gap-4 md:flex-row xl:mx-80 mb-5'>
         
-      <SectionCard title="" content={<Programmer text="programmer" />} />
-      <SectionCard title="designer" content={<Rive  stateMachine={'State Machine 1'} artboard={'designer'} height={'200px'} />} />
-      <SectionCard title="animator" content={ <Rive  stateMachine={'State Machine 1'} artboard={'animator'} height={'200px'} />} />
+      <SectionCard title="" content={<Programmer text="programmer " />} />
+      <SectionCard title="designer" content={<Rive  stateMachine={'State Machine 1'} artboard={'designer'} height={'100%'} />} />
+      <SectionCard title="animator" content={ <Rive  stateMachine={'State Machine 1'} artboard={'animator'} height={'100%'} />} />
     </section>
   
       <section className=' lg:my-60  my-10'>

@@ -4,6 +4,8 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
@@ -13,10 +15,11 @@ export default {
         hide: 'scrollbar-width-none'
       },
       colors: {
-        p1: '#73ffd7',
-        primary: '#00eeff',
-        secondary: '#ffffff',
-        lightbg: '#102130'
+        text: 'var(--text)',
+        background: 'var(--background)',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        accent: 'var(--accent)',
       },
     },
   },

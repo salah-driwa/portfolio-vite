@@ -31,9 +31,10 @@ const Presentation = ({ text }) => {
   }, [start, text]);
 
   return (
-    <div ref={ref} className='  '>
-      <h1 className=" text-center text-secondary font-bold font-mono text-3xl uppercase pt-10 blinking-cursor ">{type}</h1>
-      <Rive  stateMachine={'State Machine 1'} artboard={'programmer'} height={'200px'} />
+    <div ref={ref} className='   h-20 xl:h-80 '>
+      <h1 className=" text-text text-center  font-bold font-mono 
+       text-sm xl:text-3xl uppercase xl:pt-10 blinking-cursor ">{type}</h1>
+      <Rive  stateMachine={'State Machine 1'} artboard={'programmer'} height={"100%"} />
 
     </div>
   );
