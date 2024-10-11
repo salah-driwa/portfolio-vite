@@ -23,7 +23,7 @@ const SectionCard = ({ title, content }) => {
           {title}
         </h1>
       )}
-        <div className="pt-3 h-24 ">{content}</div>
+        <div className="pt-3   h-24 lg:h-64 ">{content}</div>
       </div>
     </motion.div>
   );
