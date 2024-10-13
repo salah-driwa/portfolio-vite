@@ -6,50 +6,49 @@ import  Button  from "./rive/Button";
 import Section from "./Section_animation";
 
 const Footer = () => {
-    return ( 
-        <footer className="  relative bg-lightbg " >     
-          <div className="mx-auto border-b-2 border-gray-500 w-1/2 sm:mt-36 mt-5 pt-5 h-1"></div>
-          
-         
-              <div className="sm:relative ">
-                <div className="hidden sm:block pt-10">
-
-                </div>
-               
-                
-               <h1 className="font-mono text-primary  font-bold  text-2xl
-                pt-2  sm:text-3xl   
-                m-auto text-center ">Social and Contact</h1>
-                
-                 <Button/>
-               
-              
-              
-             
-            
-              <div className="flex  sm:gap-6  pb-12 sm:mt-0 gap-5 mt-2  w-72 mx-auto   "> 
-             
-        {Social.map((Social, index) => {
-            return (
-             <Section x={-100} delay={index*0.2}>
-                <motion.div whileHover={{scale:1.1 }}
-                       key={index}
-                       className="sm:h-10 sm:w-full   h-10  ">
-                <a href={Social.url}>
-                  <img src={Social.img} alt="" className="  rounded-3xl"/>
-                
-                  </a>
-                </motion.div>
-                </Section>
-               
-                );
-           
-             }) }
+  return (
+      <footer className="relative bg-accent p-5">
+          <div className="max-w-6xl mx-auto text-center">
+              <div className="hidden sm:block">
+                  <Button />
               </div>
-           </div>
+
+              <div className="flex flex-col items-center text-text sm:flex-row justify-between mt-10">
+                  <div className="mb-5">
+                      <h3 className="text-lg font-semibold">About Us</h3>
+                      <p className="text-gray-800">Learn more about our mission and values.</p>
+                  </div>
+                  <div className="mb-5">
+                      <h3 className="text-lg font-semibold">Contact</h3>
+                      <p className="text-gray-800">salah.driwa.job@gmail.com
+                      </p>
+                  </div>
+                  <div className="mb-5">
+                      <h3 className="text-lg  font-semibold">Follow Us</h3>
+                      <div className="flex sm:gap-6 justify-center gap-4 my-3 ">
+                          {Social.map((social, index) => (
+                              <Section x={-100} delay={index * 0.2} key={index}>
+                                  <motion.div
+                                      whileHover={{ scale: 1.1 }}
+                                      className="h-10 w-10"
+                                  >
+                                      <a href={social.url}>
+                                          <img src={social.img} alt="" className="bg-gray-700 p-2 rounded-full" />
+                                      </a>
+                                  </motion.div>
+                              </Section>
+                          ))}
+                      </div>
+                  </div>
+              </div>
+
+              <div className="mt-10 border-t border-gray-800 pt-5 sm:mb-0 mb-40">
+                  <p className="text-gray-800 text-sm">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+              </div>
+          </div>
       </footer>
-  
-     );
-}
- 
+  );
+};
+
 export default Footer;
+

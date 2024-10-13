@@ -11,7 +11,8 @@ const DevelopmentProject = [
       tags: ["#React"],
       link: "https://template-travelwebsite.netlify.app/",
       icons: [7, 8],
-      url:"https://cdn.artstation.com/p/video_sources/001/583/023/travelwebsite.mp4"
+      url:"https://cdn.artstation.com/p/video_sources/001/583/023/travelwebsite.mp4",
+      icon:"https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
     },
     { 
       img: img2,
@@ -20,16 +21,18 @@ const DevelopmentProject = [
       tags: ["#React"],
       link: "https://cinemaplus1.netlify.app/",
       icons: [7,8,6,5],
-      url:"https://cdn.artstation.com/p/video_sources/001/583/050/netflix-clone.mp4"
+      url:"https://cdn.artstation.com/p/video_sources/001/583/050/netflix-clone.mp4",
+        icon:"https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
     },
     { 
-      img: img3,
+      img: [img3,img2,img1],
       title: "Game Store",
       description: "A Game Store with a  API for Game . Built with Angular, Tailwind CSS,  Firebase for authentication and fire store  ",
       tags: ["#Angular"],
       link: "https://gamesstore-angular.netlify.app/",
       icons: [10,8,5],
-      url:""
+      url:"",
+        icon:"https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
     }
   ];
   

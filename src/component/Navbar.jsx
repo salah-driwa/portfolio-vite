@@ -1,6 +1,6 @@
 import { FaHome, FaInfoCircle, FaMoon, FaStar, FaSun } from 'react-icons/fa';
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
-import {MdMenu,MdMenuOpen}from 'react-icons/md'
+
 import { Link   } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useState ,useEffect } from 'react';
@@ -9,7 +9,7 @@ import Section from './Section_animation';
 //import { useLanguage } from './context/languagecontxt';
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [isHovered, setIsHovered] = useState({
     home: false,
     about: false,
@@ -18,9 +18,6 @@ const Navbar = () => {
   });
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleMobileMenuToggle = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
 
   const handleHover = (menuItem) => {
     setIsHovered((prevState) => ({
@@ -78,9 +75,10 @@ const Navbar = () => {
 
 
   return (
-<motion.nav
-    className={`sm:flex sm:items-center justify-between sm:py-4 sm:px-20 align-top text-text   sm:border-none border border-gray-300 border-opacity-50
-      h-fit text-secondary-button sm:h-20 w-full fixed z-50 `}
+<motion.nav 
+    className={`sm:flex sm:items-center justify-between sm:py-4 sm:px-20 align-top text-text 
+         sm:border-none border border-gray-300 border-opacity-50
+      h-fit text-secondary-button sm:h-20 w-full fixed z-50  `}
     
       initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
       animate={{
@@ -92,6 +90,7 @@ const Navbar = () => {
     >
     <div className=' flex px-6 py-3  bg-accent sm:bg-transparent  '>
           <Section x={0} y={-40}>
+     
       <Link
         to="home"
         smooth={true}
@@ -100,16 +99,11 @@ const Navbar = () => {
         onClick={() => setIsHovered({ home: false, about: false, popular: false, explore: false })}
       >
        
-        <h1 className="sm:text-2xl font-bold    text-text">Portfolio</h1>
+        <h1  className="sm:text-2xl font-bold    text-text"> Portfolio</h1>
 
       </Link>
       </Section>
-      <button
-          className="flex flex-col align-top    ml-auto space-x-2 cursor-pointer hover:font-semibold sm:hidden "
-          onClick={handleMobileMenuToggle}
-        >
-          <span>{isMobileMenuOpen? <MdMenuOpen size={30}/> :<MdMenu size={30}/>  }</span>
-        </button>
+   
         </div>
 
       <div className="sm:flex items-center sm:space-x-20 hidden ">
@@ -201,88 +195,7 @@ const Navbar = () => {
       </div>
     
 
-      {/* Mobile Menu ***************************************************************************/}
-      <div className="sm:hidden block w-full">
-  {isMobileMenuOpen && (
-    <motion.div initial={{y:-60}}
-    animate={{y:[10,0]}}
-    className="flex flex-col w-full px-6 bg-[#012D54]  ">
-      <motion.div
-      
-      initial={{x:10, opacity :0}}
-      animate={{x:0, opacity :1}}
-      transition={{ delay: 0 }}
-      >
-      <Link
-        to="home"
-        smooth={true}
-        duration={1000}
-        
-        className="flex items-center space-x-2 cursor-pointer hover:font-semibold py-3 border-t border-gray-300 border-opacity-50"
-        onClick={handleMobileMenuToggle}
-      >
-        <FaHome className="sm:text-xl" />
-        <span>Home</span>
-      </Link>
-      </motion.div>
-      <motion.div
-      initial={{x:10, opacity :0}}
-      animate={{x:0, opacity :1}}
-      transition={{ delay: 0.1 }}
-      >
-      <Link
-       
-        to="about"
-        smooth={true}
-        offset={-200}
-        duration={1000}
-        className="flex items-center space-x-2 cursor-pointer hover:font-semibold py-3 border-t border-gray-300 border-opacity-50"
-        onClick={handleMobileMenuToggle}
-      >
-        <FaInfoCircle className="sm:text-xl" />
-        <span>About</span>
-      </Link>
-      </motion.div>
-      <motion.div
-      initial={{x:10, opacity :0}}
-      animate={{x:0, opacity :1}}
-      transition={{ delay: 0.2 }}
-      >
-      <Link
-        to="skills"
-        smooth={true}
-        duration={1000}
-        offset={-100}
-        className="flex items-center space-x-2 cursor-pointer hover:font-semibold py-3 border-t border-gray-300 border-opacity-50"
-        onClick={handleMobileMenuToggle}
-      >
-        <FaStar className="sm:text-xl" />
-        <span>Skills</span>
-      </Link>
-      </motion.div>
-
-
-      <motion.div
-      initial={{x:10, opacity :0}}
-      animate={{x:0, opacity :1}}
-      transition={{ delay: 0.3 }}
-      > 
-      <Link
-        to="project"
-        smooth={true}
-        duration={1000}
-        offset={-100}
-        className="flex items-center space-x-2 cursor-pointer hover:font-semibold py-3 border-t  border-gray-300 border-opacity-50"
-        onClick={handleMobileMenuToggle}
-      >
-        <AiOutlineFundProjectionScreen className="sm:text-xl" />
-        <span>Projects</span>
-      </Link>
-      </motion.div>
-    </motion.div>
-  )}
-</div>
-
+    
       
     </motion.nav>
  
