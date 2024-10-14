@@ -5,6 +5,7 @@ import AnimatedIcon from './Bubble';
 import { FiPenTool } from "react-icons/fi";
 import { FaGamepad, FaLaptopCode } from 'react-icons/fa';
 import ParticleEffect from './ParticleEffect';
+import { SiRive } from "react-icons/si";
 
 
 function Herosection() {
@@ -18,7 +19,7 @@ function Herosection() {
   };
 
   return (
-    <div className=' xl:min-h-[120vh] h-[100vh] flex justify-center relative items-center'>
+    <div className=' xl:min-h-[120vh] h-[100vh] w-screen flex justify-center relative items-center'>
       <ParticleEffect/>
    
       <motion.div
@@ -45,7 +46,7 @@ function Herosection() {
           onHoverChange={handleHover}
           icon={<FiPenTool  size={50} classname="text-text"/> }
           delay={0}
-          link={"https://truedarkanimations.netlify.app/"}
+          link={"https://truedark-portfolio.netlify.app/projects?tab=Design"}
           text="Designs"
            textTop="30%"
   textLeft="-200%"
@@ -57,7 +58,7 @@ function Herosection() {
           onHoverChange={handleHover}
           icon={<FaLaptopCode  size={50} classname="text-text" />} 
           delay={1.2}
-          link={"https://dashboard-exemples.netlify.app/"}
+          link={"https://truedark-portfolio.netlify.app/projects?tab=Website"}
           text="Development"
   textTop="30%"
   textLeft="120%"
@@ -70,19 +71,33 @@ function Herosection() {
           icon={<MdDraw  size={50} classname="text-text" />} 
           delay={3}
           text="Illustration"
+          link={"https://truedark-portfolio.netlify.app/projects?tab=Illustration"}
             textTop="110%"
   textLeft="20%"
         />
         <AnimatedIcon 
-          positionClasses="top-48 right-96 md:top-96 md:right-192 lg:top-[650px] lg:right-[450px] xl:right-[660px]" 
+          positionClasses="top-48 right-96 md:top-96 md:right-192 lg:top-[650px] lg:right-[450px] xl:right-[860px]" 
           bgColor="rgba(177, 8, 242, 0.5)" 
           hoverBgColor="rgba(177, 8, 242, 1)" 
           onHoverChange={handleHover}
           icon={<FaGamepad size={50} classname="text-text" />} 
           delay={2}
           text="Games"
+          link={"https://truedark-portfolio.netlify.app/projects?tab=Games"}
              textTop="-80%"
   textLeft="-150%"
+        />
+          <AnimatedIcon 
+          positionClasses="top-48 right-20 md:top-10 md:right-192 lg:top-[650px] lg:right-[150px] xl:right-[360px]" 
+          bgColor="rgba(177, 88, 42, 0.5)" 
+          hoverBgColor="rgba(177, 88, 42, 1)" 
+          onHoverChange={handleHover}
+          icon={<SiRive size={50} classname="text-text" />} 
+          delay={2}
+          text="character"
+             textTop="-120%"
+  textLeft="-20%"
+       link={"https://truedarkanimations.netlify.app/"}
         />
       </div>
     </div>

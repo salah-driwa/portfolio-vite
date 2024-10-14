@@ -28,7 +28,7 @@ const DevelopmentProject = [
   },
   { 
     id: 3,
-    img: [img3, img2, img1],
+    img: [img3],
     title: "Game Store",
     description: "An eCommerce store dedicated to games, using Angular and Firebase for product management and user authentication.",
     tags: ["#Angular"],

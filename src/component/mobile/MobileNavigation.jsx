@@ -10,9 +10,9 @@ function MobileNavigation() {
   const size = 20;
   const [navItems] = useState([
     { name: 'Home', icon: <FaHome size={size} />, path: '/' },
-    { name: 'AppStore', icon: <AiFillAppstore size={size} />, path: '/projects' },
-    { name: 'AppStore2', icon: <AiFillAppstore size={size} />, path: '/appstore2' },
-    { name: 'AppStore3', icon: <AiFillAppstore size={size} />, path: '/appstore3' },
+    { name: 'projects', icon: <AiFillAppstore size={size} />, path: '/projects' },
+    { name: 'about', icon: <AiFillAppstore size={size} />, path: '/about' },
+    { name: 'skills', icon: <AiFillAppstore size={size} />, path: '/skills' },
   ]);
   
   const [isDark, setIsDark] = useState(false);

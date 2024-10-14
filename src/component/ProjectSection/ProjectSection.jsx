@@ -1,7 +1,7 @@
 // ProjectSection.js
 import { useSearchParams } from 'react-router-dom';
 import { MdWeb, MdDraw } from 'react-icons/md';
-import { FaGamepad, FaPaintBrush } from 'react-icons/fa';
+import { FaGamepad } from 'react-icons/fa';
 import { LuPenTool } from 'react-icons/lu';
 import { BiSolidCube } from 'react-icons/bi';
 import Carousel from './Carousel';
@@ -16,8 +16,8 @@ const tabs = [
   { name: 'Website', icon: <MdWeb size={24} /> },
   { name: 'Games', icon: <FaGamepad size={24} /> },
   { name: 'Illustration', icon: <MdDraw size={24} /> },
-  { name: 'Splashart', icon: <FaPaintBrush size={24} /> },
-  { name: 'Logos', icon: <LuPenTool size={24} /> },
+
+  { name: 'Design', icon: <LuPenTool size={24} /> },
   { name: 'Animation', icon: <BiSolidCube size={24} /> },
 ];
 
@@ -53,7 +53,7 @@ function ProjectSection({digitalIllustration, images2, Logos, Website, games,Ani
       {activeTab === 'Games' && <Carousel datas={games} text="Games" />}
       {activeTab === 'Illustration' && <Carousel datas={digitalIllustration} text="Illustration" />}
       {activeTab === 'Splashart' && <Carousel datas={images2} text="Splashart" />}
-      {activeTab === 'Logos' && <Carousel datas={Logos} text="Logos" />}
+      {activeTab === 'Design' && <Carousel datas={Logos} text="Design" />}
       {activeTab === 'Animation' && <Carousel datas={Animation} text="Animation" />}
       </div>
     </body>
