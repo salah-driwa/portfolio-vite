@@ -10,6 +10,7 @@ const games = [
     tags: ['#game'],
     link: 'https://memory-game-15.netlify.app',
     icons: [2,7],
+    icon:"https://cdn-icons-png.flaticon.com/512/5930/5930147.png"
   },
   {
     img: img2,
@@ -19,6 +20,7 @@ const games = [
     tags: ['#game'],
     link: 'https://quiz-game-12.netlify.app',
     icons: [2,7],
+     icon:"https://cdn-icons-png.flaticon.com/512/5930/5930147.png"
   }
 ];
 

@@ -31,7 +31,7 @@ function ProjectSection({digitalIllustration, images2, Logos, Website, games,Ani
   };
 
   return (
-    <body className="  w-full  ">
+    <body className="  w-full mb-36  ">
       {/* Scrollable Tabs */}
       <div className="flex gap-3 px-4 py-2 w-screen overflow-x-auto custom-scrollbar justify-start">
         {tabs.map((tab) => (

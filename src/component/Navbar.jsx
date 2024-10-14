@@ -1,11 +1,12 @@
 import { FaHome, FaInfoCircle, FaMoon, FaStar, FaSun } from 'react-icons/fa';
 import {AiOutlineFundProjectionScreen} from 'react-icons/ai'
 
-import { Link   } from 'react-scroll';
+
 import { motion } from 'framer-motion';
 import { useState ,useEffect } from 'react';
 
 import Section from './Section_animation';
+import { Link } from 'react-router-dom';
 //import { useLanguage } from './context/languagecontxt';
 
 const Navbar = () => {
@@ -92,7 +93,7 @@ const Navbar = () => {
           <Section x={0} y={-40}>
      
       <Link
-        to="home"
+        to="/"
         smooth={true}
         duration={500}
         className="flex items-center align-top"
@@ -118,7 +119,7 @@ const Navbar = () => {
                 </motion.button>
         {/* Home */}
         <Link
-          to="home"
+          to="/"
           smooth={true}
           duration={1000}
           className={`flex items-center space-x-2 cursor-pointer hover:font-semibold ${
@@ -174,7 +175,7 @@ const Navbar = () => {
 
         {/* Explore */}
         <Link
-          to="project"
+          to="projects"
           smooth={true}
           duration={1000}
           offset={-100}

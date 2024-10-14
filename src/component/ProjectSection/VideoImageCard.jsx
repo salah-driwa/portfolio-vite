@@ -45,10 +45,11 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
       href={link}
       target="_blank"
       rel="noreferrer"
-      className=" block min-w-80"
+      className=" block min-w-80 "
    
     >
-      <div className="p-5 dark:bg-white bg-gray-500 bg-opacity-10  dark:bg-opacity-10 hover:bg-opacity-30 rounded-xl relative   w-[350px] mx-auto sm:mx-0  h-56  sm:w-[380px] sm:h-64 overflow-hidden">
+      <div  className={`p-5 bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10 dark:hover:bg-opacity-20 hover:bg-opacity-30 rounded-xl relative w-[350px] mx-auto sm:mx-0 h-56 sm:w-[380px] sm:h-64 overflow-hidden transition-all duration-300 ease-in-out ${isHovered ? 'hover:bg-opacity-50 ' : ''}`}
+ >
 
       {isHovered && videoUrl ? (
   <div className="absolute top-1 right-2 z-50 p-1">
@@ -166,7 +167,8 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
     className="w-12 h-12 object-fill  my-auto bg-white rounded-2xl mr-3"
   />
   <div className="flex flex-col items-start justify-start  align-top overflow-hidden">
-    <h1 className="text-left text-primary font-bold font-mono text-lg mt-2">
+    <h1 className="text-left text-primary font-bold text-nowrap font-mono  text-lg mt-2 truncate"
+     style={{ whiteSpace: "nowrap" }}>
       {title}
     </h1>
     <h1
