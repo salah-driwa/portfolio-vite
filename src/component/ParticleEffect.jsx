@@ -33,7 +33,7 @@ function ParticleEffect() {
   }, []);
 
   return (
-    <div className='relative min-h-[125vh]  w-full  overflow-hidden'>
+    <div className=' min-h-[125vh]  w-full  overflow-hidden'>
       {particles.map((particle, index) => (
         <motion.div
           key={index}

@@ -2,7 +2,7 @@ import { AiFillAppstore } from "react-icons/ai";
 import { FaHome, FaSun, FaMoon } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import {  FaInfoCircle,  FaStar } from 'react-icons/fa';
 
 function MobileNavigation() {
   const navigate = useNavigate();
@@ -11,23 +11,27 @@ function MobileNavigation() {
   const [navItems] = useState([
     { name: 'Home', icon: <FaHome size={size} />, path: '/' },
     { name: 'projects', icon: <AiFillAppstore size={size} />, path: '/projects' },
-    { name: 'about', icon: <AiFillAppstore size={size} />, path: '/about' },
-    { name: 'skills', icon: <AiFillAppstore size={size} />, path: '/skills' },
+    { name: 'about', icon: <FaInfoCircle size={size} />, path: '/about' },
+    { name: 'skills', icon: <FaStar size={size} />, path: '/skills' },
   ]);
   
-  const [isDark, setIsDark] = useState(false);
-
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme === 'dark';
+  });
+  
   const handleNavigation = (path) => {
     window.scrollTo(0, 0); // Scroll to top
     navigate(path);
   };
-
+  
   const toggleTheme = () => {
     const newTheme = isDark ? 'light' : 'dark';
     setIsDark(!isDark);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
   };
+  
 
   return (
     <div className="fixed bottom-0 z-50 h-18 w-10/12 p-3 bg-[var(--text)] flex justify-around gap-2 items-center mb-5 mx-8 rounded-full shadow-lg">
