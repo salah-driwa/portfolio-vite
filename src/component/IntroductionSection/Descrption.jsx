@@ -19,6 +19,7 @@ const Description = () => {
       }}
       transition={{ duration: 0.5 }} className=" mx-auto xl:h-96   xl:w-[390px]  size-40  rounded-full">
           <div className=" bg-gray-300 dark:bg-white xl:h-96  xl:w-[390px] size-40   rounded-full absolute"></div>
+          <div className=" bg-red-400 opacity-0 w-full h-full absolute z-50 "></div>
             <div className=" w-full h-full pt-22">
           <Button />
           

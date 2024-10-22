@@ -3,6 +3,7 @@ import Content from './component/Content.jsx';
 //import Dragon from './component/rive/Dragons.js';
 
 import Herosection from './component/Herosection.jsx';
+import MobileHeroSection from './component/mobile/MobileHeroSection.jsx';
 
 
 function Home() {
@@ -22,8 +23,10 @@ function Home() {
   
 
    </header>
+   <div className='  sm:hidden block'>
+   <MobileHeroSection />
     
-
+   </div>
    
              <Content />
   

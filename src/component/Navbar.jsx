@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
 import { FaHome, FaInfoCircle, FaMoon, FaStar, FaSun } from 'react-icons/fa';
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import { motion } from 'framer-motion';
@@ -26,6 +28,7 @@ const Navbar = () => {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
   };
+
   useEffect(() => {
     // Ensure the correct theme is applied on load
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -38,6 +41,19 @@ const Navbar = () => {
 
   const handleHover = (name) => setIsHovered((prev) => ({ ...prev, [name]: !prev[name] }));
 
+  // Animation for staggered effect on nav items
+  const navItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,  // 0.2 seconds delay for each item
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    }),
+  };
 
   return (
     <motion.nav
@@ -69,21 +85,29 @@ const Navbar = () => {
           {isDark ? <FaSun size={26} color="black" /> : <FaMoon size={26} color="white" />}
         </motion.button>
 
-        {NAV_ITEMS.map(({ name, icon, path, animation }) => (
-          <Link
+        {NAV_ITEMS.map(({ name, icon, path, animation }, index) => (
+          <motion.div
             key={name}
-            to={path}
-            onMouseEnter={() => handleHover(name)}
-            onMouseLeave={() => handleHover(name)}
-            className={`flex items-center space-x-2 cursor-pointer hover:font-semibold ${
-              isHovered[name] ? 'text-primary' : ''
-            }`}
+            custom={index}  // Custom prop to stagger each item's appearance
+            initial="hidden"
+            animate="visible"
+            variants={navItemVariants}
+            className="flex"
           >
-            <motion.div animate={isHovered[name] ? animation : {}}>
-              {icon}
-            </motion.div>
-            <span>{name}</span>
-          </Link>
+            <Link
+              to={path}
+              onMouseEnter={() => handleHover(name)}
+              onMouseLeave={() => handleHover(name)}
+              className={`flex items-center space-x-2 cursor-pointer hover:font-semibold ${
+                isHovered[name] ? 'text-primary' : ''
+              }`}
+            >
+              <motion.div className=' text-text' animate={isHovered[name] ? animation : {}}>
+                {icon}
+              </motion.div>
+              <span className=' text-text'>{name} </span>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </motion.nav>

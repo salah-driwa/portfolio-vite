@@ -4,17 +4,16 @@ import img3 from './angular project.png'
 
 
 const DevelopmentProject = [
-  { 
-    id: 1,
-    img: img1,
-    title: "Travel Site",
-    description: "A travel platform offering engaging visuals and smooth animations to explore travel destinations. Built using React, Tailwind CSS, and Framer Motion.",
-    tags: ["#React"],
-    link: "https://template-travelwebsite.netlify.app/",
-    icons: [7, 8],
-    url: "https://cdn.artstation.com/p/video_sources/001/583/023/travelwebsite.mp4",
+  
+  {
+    id: 10,
+    title: "League of Legends Champions List",
+    description: "A sleek dashboard for managing and discovering music, with playlists and user preferences integrated.",
+    link: "https://leagueoflegend-client.netlify.app",
+    img: "https://cdn.dribbble.com/userupload/11388274/file/original-8e0f69bb1185326935fce7b31fbafbc8.jpg?resize=1024x768&vertical=center",
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
+
   { 
     id: 2,
     img: img2,
@@ -26,6 +25,14 @@ const DevelopmentProject = [
     url: "https://cdn.artstation.com/p/video_sources/001/583/050/netflix-clone.mp4",
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
+  {
+    id: 7,
+    title: "Discord Clone",
+    description: "A clone of the popular messaging platform, Discord, replicating core features like server-based chat.",
+    link: "https://discord-clone12.netlify.app/",
+    img: "https://cdn.dribbble.com/userupload/14785078/file/original-e0412c4a7f985fc28b5c5418807cc427.png?resize=1600x1200",
+    icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
+  },
   { 
     id: 3,
     img: [img3],
@@ -35,7 +42,7 @@ const DevelopmentProject = [
     link: "https://gamesstore-angular.netlify.app/",
     icons: [10, 8, 5],
     url: "",
-    icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
   },
   {
     id: 4,
@@ -61,12 +68,16 @@ const DevelopmentProject = [
     img: "https://cdn.dribbble.com/userupload/10078496/file/original-263868fe956798afc77f8beff0255c84.png?resize=752x564&vertical=center",
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
-  {
-    id: 7,
-    title: "Discord Clone",
-    description: "A clone of the popular messaging platform, Discord, replicating core features like server-based chat.",
-    link: "https://discord-clone12.netlify.app/",
-    img: "https://cdn.dribbble.com/userupload/14785078/file/original-e0412c4a7f985fc28b5c5418807cc427.png?resize=1600x1200",
+
+  { 
+    id: 1,
+    img: img1,
+    title: "Travel Site",
+    description: "A travel platform offering engaging visuals and smooth animations to explore travel destinations. Built using React, Tailwind CSS, and Framer Motion.",
+    tags: ["#React"],
+    link: "https://template-travelwebsite.netlify.app/",
+    icons: [7, 8],
+    url: "https://cdn.artstation.com/p/video_sources/001/583/023/travelwebsite.mp4",
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
   {
@@ -86,6 +97,7 @@ const DevelopmentProject = [
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   }
 ];
+
 
 export default DevelopmentProject;
 
