@@ -17,13 +17,13 @@ function Index() {
       <Section x={0} y={-100}>
         <Description />
       </Section>
-      <h1 className="text-center text-sm lg:mx-auto text-text font-bold font-mono lg:text-xl uppercase mx-2 lg:w-1/2">
-        Welcome to <span className="text-primary">TrueDark</span>, where we
+      <h1 className="text-center w-10/12    mx-auto mb-3 text-md lg:mx-auto text-text   font-normal lg:text-xl   mt-2 lg:w-1/2">
+        Welcome to <span className="text-primary  font-semibold">TrueDark</span>, where we
         craft innovative web development, stunning designs, and creative art
         solutions to elevate your brand.
       </h1>
 
-      <h1 className="text-center text-secondary font-bold font-mono text-3xl uppercase pb-10 pt-2">
+      <h1 className="text-center text-secondary font-bold text-3xl uppercase pb-10 pt-2">
         Click to Interact
       </h1>
 
