@@ -22,10 +22,11 @@ const Content = () => {
       <Section x={0} y={-100}>
         <Description />
       </Section>
-      <h1 className="text-center text-sm lg:mx-auto text-text font-bold lg:text-xl uppercase mx-2 lg:w-1/2">
-        Welcome to <span className="text-primary">TrueDark</span>, where we craft innovative web development, stunning designs, and creative art solutions to elevate your brand.
+      <h1 className="text-center w-10/12    mx-auto mb-3 text-md lg:mx-auto text-text   font-normal lg:text-xl   mt-2 lg:w-1/2">
+        Welcome to <span className="text-primary  font-semibold">TrueDark</span>, where we
+        craft innovative web development, stunning designs, and creative art
+        solutions to elevate your brand.
       </h1>
-
       <h1 className="text-center text-secondary font-bold text-3xl pb-10 pt-2">Interactive UI</h1>
 
       {/* Cards Section */}
