@@ -38,7 +38,7 @@ const GraphicDesignProjects = [
     description:
       "A diverse collection of logo designs, including typography, abstract, modern, and mascot styles. Explore these unique concepts and more on ArtStation.",
     tags: ["#LogoDesign", "#Typography", "#AbstractArt", "#Modern", "#Mascot"],
-    link: "https://www.behance.net/gallery/210800503/Tunisian-League-Redsign",
+    link: "https://www.behance.net/gallery/185264415/Valhalla-Pizzeria",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
     img: [
