@@ -109,6 +109,8 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
                   src={imageUrl[imageIndex]}
                   alt={`Image ${imageIndex + 1}`}
                   className="w-full h-full object-cover rounded-lg"
+                   width="350"
+  height="200"
                 />
 
 { isHovered&& (
@@ -129,6 +131,8 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
                 src={imageUrl}
                 alt={`Image ${imageIndex + 1}`}
                 className="w-full h-full object-cover rounded-lg"
+                 width="350"
+  height="200"
               />
             )}
           </div>
@@ -165,6 +169,8 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
     src={icon}
     alt=""
     className="w-12 h-12 object-fill  my-auto bg-white rounded-2xl mr-3"
+     width="350"
+  height="200"
   />
   <div className="flex flex-col items-start justify-start  align-top overflow-hidden">
     <h1 className="text-left text-primary font-bold text-nowrap font-mono  text-lg mt-2 truncate"
