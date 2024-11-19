@@ -164,26 +164,42 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
                 
 
     </div> 
-    <div className="flex h-20   sm:justify-start  sm:items-start sm:align-top   w-10/12 mx-auto justify-center align-middle  items-center max-w-96 sm:mt-3">
+    <div className="flex h-20  gap-4  sm:justify-start  sm:items-start sm:align-top   w-10/12 mx-auto justify-center align-middle  items-center max-w-96 sm:mt-3">
   <img
     src={icon}
     alt=""
-    className="w-12 h-12 object-fill  my-auto bg-white rounded-2xl mr-3"
-     width="350"
-  height="200"
+    className="  size-12 object-contain  my-auto bg-white rounded-2xl "
+  
   />
-  <div className="flex flex-col items-start justify-start  align-top overflow-hidden">
-    <h1 className="text-left text-primary font-bold text-nowrap font-mono  text-lg mt-2 truncate"
-     style={{ whiteSpace: "nowrap" }}>
-      {title}
-    </h1>
-    <h1
-      className="text-left text-text max-w-full font-mono font-thin text-sm opacity-70 mt-2 truncate"
-      style={{ whiteSpace: "nowrap" }}
-    >
-      {description}
-    </h1>
-  </div>
+
+
+ <div 
+  className="flex flex-col items-start justify-start align-top relative w-9/12 "
+
+>
+  {/* Title */}
+  <h1
+    className="text-left text-primary font-bold text-nowrap font-mono text-lg mt-2 truncate w-full overflow-hidden "
+    style={{ whiteSpace: "nowrap" }}
+  >
+    {title}
+  </h1>
+
+  {/* Description */}
+  <h1
+    className="text-left text-text max-w-full font-mono font-thin text-sm opacity-70 mt-2 truncate w-full overflow-hidden"
+    style={{ whiteSpace: "nowrap" }}
+  >
+    {description}
+  </h1>
+
+  {/* Popup */}
+  {isHovered && (
+    <div className="absolute left-0 top-full mt-2 bg-black/80 text-white p-3 rounded-lg shadow-lg z-[200] w-72">
+      <p className="text-sm font-mono font-thin">{description}</p>
+    </div>
+  )}
+</div>
 </div>
 
 
