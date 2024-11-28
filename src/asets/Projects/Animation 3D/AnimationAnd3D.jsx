@@ -1,4 +1,4 @@
-
+import img1 from "./images/3dcarimg.png"
 const Animation = [
     { 
       img: "https://cdna.artstation.com/p/assets/images/images/067/540/560/large/true-dark-293760440-180316924372451-3530358735179340964-n.jpg?1695634446",
@@ -17,7 +17,7 @@ const Animation = [
       tags: ["#React"],
       link: "https://cinemaplus1.netlify.app/",
       icons: [7, 8, 6, 5],
-      img:[ "https://mir-s3-cdn-cf.behance.net/project_modules/fs/ee4556212857297.673c7bc2e83f7.png" ],
+      img:[ img1 ],
     url:"https://cdn.dribbble.com/userupload/15760882/file/original-bdac76de0787bb531672fe711223b801.mp4",
       icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
     },

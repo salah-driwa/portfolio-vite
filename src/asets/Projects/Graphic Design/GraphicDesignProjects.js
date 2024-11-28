@@ -1,4 +1,26 @@
-
+import trueDarkLogo from './images/true-dark-truedark-logo.jpg';
+import trueDarkLogo1 from './images/true-dark-logo1.jpg';
+import trueDarkLogo2 from './images/true-dark-logo2.jpg';
+import trueDarkMyLogo from './images/true-dark-my-logo.jpg';
+import tunisianLeague1 from './images/fcef55210800503.673b5869c48fa.jpg';
+import tunisianLeague2 from './images/b17690210800503.673b5869c5189.jpg';
+import tunisianLeague3 from './images/e4b5f9210800503.673b5869c3d1c.jpg';
+import tunisianLeague4 from './images/d3900c210800503.673b5869c369d.jpg';
+import tunisianLeague5 from './images/25fdcc210800503.673b5869c57c0.jpg';
+import valhallaPizza1 from './images/47bb5a185264415.673b5ccf69256.jpg';
+import valhallaPizza2 from './images/931503185264415.673b5ccf68b5a.jpg';
+import valhallaPizza3 from './images/272cc1185264415.673b5ccf67c82.jpg';
+import valhallaPizza4 from './images/fd57e4185264415.673b5ccf683bd.jpg';
+import valhallaPizza5 from './images/1e6309185264415.673b5ccf6742d.jpg';
+import horizon1 from './images/369dc4212771811.673b32360b13e.jpg';
+import horizon2 from './images/6399c2212771811.673b32360aa3c.jpg';
+import horizon3 from './images/e230a1212771811.673b32360a478.jpg';
+import horizon4 from './images/c9d48a212771811.673b323609cf1.png';
+import ramiCaffe1 from './images/f1e66d212769255.673b2b204f6a1.jpg';
+import ramiCaffe2 from './images/1129ec212769255.673b2b2050c52.jpg';
+import ramiCaffe3 from './images/e3cba5212769255.673b2b204ec83.jpg';
+import ramiCaffe4 from './images/ee5757212769255.673b2b204fd37.jpg';
+import ramiCaffe5 from './images/838f73212769255.673b2b2050261.jpg';
 
 const GraphicDesignProjects = [
   {
@@ -9,13 +31,7 @@ const GraphicDesignProjects = [
     link: "https://www.artstation.com/artwork/OGmqkJ",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
-    img: [
-      "https://cdna.artstation.com/p/assets/images/images/049/868/988/large/true-dark-truedark-logo.jpg?1653503265",
-      "https://cdna.artstation.com/p/assets/images/images/060/433/588/large/true-dark-logo1.jpg?1678556634",
-      "https://cdna.artstation.com/p/assets/images/images/060/433/584/large/true-dark-logo2.jpg?1678556631",
-      "https://cdna.artstation.com/p/assets/images/images/060/433/622/large/true-dark-my-logo.jpg?1678556713",
-  
-    ],
+    img: [trueDarkLogo, trueDarkLogo1, trueDarkLogo2, trueDarkMyLogo],
   },
   {
     title: "Tunisian League",
@@ -25,13 +41,7 @@ const GraphicDesignProjects = [
     link: "https://www.behance.net/gallery/210800503/Tunisian-League-Redsign",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
-    img: [
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fcef55210800503.673b5869c48fa.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/b17690210800503.673b5869c5189.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e4b5f9210800503.673b5869c3d1c.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/d3900c210800503.673b5869c369d.jpg",
-  "https://mir-s3-cdn-cf.behance.net/project_modules/fs/25fdcc210800503.673b5869c57c0.jpg"
-    ],
+    img: [tunisianLeague1, tunisianLeague2, tunisianLeague3, tunisianLeague4, tunisianLeague5],
   },
   {
     title: "Valhalla Pizzaria",
@@ -41,15 +51,8 @@ const GraphicDesignProjects = [
     link: "https://www.behance.net/gallery/185264415/Valhalla-Pizzeria",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
-    img: [
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/47bb5a185264415.673b5ccf69256.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/931503185264415.673b5ccf68b5a.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/272cc1185264415.673b5ccf67c82.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fd57e4185264415.673b5ccf683bd.jpg",
-  "https://mir-s3-cdn-cf.behance.net/project_modules/fs/1e6309185264415.673b5ccf6742d.jpg"
-    ],
+    img: [valhallaPizza1, valhallaPizza2, valhallaPizza3, valhallaPizza4, valhallaPizza5],
   },
-  
   {
     title: "Horizon",
     description:
@@ -58,13 +61,7 @@ const GraphicDesignProjects = [
     link: "https://www.behance.net/gallery/212771811/Horizon",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
-    img: [
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/369dc4212771811.673b32360b13e.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/6399c2212771811.673b32360aa3c.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e230a1212771811.673b32360a478.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c9d48a212771811.673b323609cf1.png",
-  
-    ],
+    img: [horizon1, horizon2, horizon3, horizon4],
   },
   {
     title: "RamiCaffe",
@@ -74,23 +71,8 @@ const GraphicDesignProjects = [
     link: "https://www.behance.net/gallery/212769255/RamiCaffe",
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
-    img: [
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/f1e66d212769255.673b2b204f6a1.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/1129ec212769255.673b2b2050c52.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e3cba5212769255.673b2b204ec83.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/ee5757212769255.673b2b204fd37.jpg",
-  "https://mir-s3-cdn-cf.behance.net/project_modules/fs/838f73212769255.673b2b2050261.jpg"
-    ],
+    img: [ramiCaffe1, ramiCaffe2, ramiCaffe3, ramiCaffe4, ramiCaffe5],
   },
-
-
 ];
 
-
-
 export default GraphicDesignProjects;
-
- 
-
-
-

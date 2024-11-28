@@ -1,14 +1,14 @@
-import img1 from "./imges/img1.png"
-import img2 from './imges/cinemaPlus.png'
-import img3 from './imges/angular project.png'
-import img4 from './imges/leagueoflegendclient.jpg'; // Replace 'your-image4.png' with the actual image file name
-import img5 from './imges/3dcarimg.png'; // Add the images accordingly
-import img6 from './imges/discordclone.png'; // Replace 'your-image4.png' with the actual image file name
-import img7 from './imges/dashboard1.png'; // Add the images accordingly
-import img8 from './imges/dashboard2.png'; // Replace 'your-image4.png' with the actual image file name
-import img9 from './imges/healthdashboard.png'; // Add the images accordingly
-import img10 from './imges/spotifyclone.png'; // Replace 'your-image4.png' with the actual image file name
-import img11 from './imges/watchanime.png'; // Add the images accordingly
+import img1 from "./images/img1.png"
+import img2 from './images/cinemaPlus.png'
+import img3 from './images/angular project.png'
+import img4 from './images/leagueoflegendclient.jpg'; // Replace 'your-image4.png' with the actual image file name
+import img5 from './images/3dcarimg.png'; // Add the images accordingly
+import img6 from './images/discordclone.png'; // Replace 'your-image4.png' with the actual image file name
+import img7 from './images/dashboard1.png'; // Add the images accordingly
+import img8 from './images/dashboard2.png'; // Replace 'your-image4.png' with the actual image file name
+import img9 from './images/healthdashboard.png'; // Add the images accordingly
+import img10 from './images/spotifyclone.png'; // Replace 'your-image4.png' with the actual image file name
+import img11 from './images/watchanime.png'; // Add the images accordingly
 
 
 const DevelopmentProject = [
