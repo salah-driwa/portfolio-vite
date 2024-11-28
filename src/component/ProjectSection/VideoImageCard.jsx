@@ -103,17 +103,22 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
           </div>
         ) : (
           <div className="h-full">
-            {Array.isArray(imageUrl) && imageUrl.length > 1 ? (
-              <>
+          {Array.isArray(imageUrl) && imageUrl.length > 1 ? (
+            <>
+              <div className="relative w-full h-full">
                 <img
                   src={imageUrl[imageIndex]}
                   alt={`Image ${imageIndex + 1}`}
                   className="w-full h-full object-cover rounded-lg"
-                   width="350"
-  height="200"
+                  width="350"
+                  height="200"
+                  loading="lazy"
+                  onLoad={(e) => e.target.classList.add('loaded')}
                 />
-
-{ isHovered&& (
+                <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+              </div>
+        
+              {isHovered && (
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {imageUrl.map((_, index) => (
                     <button
@@ -124,19 +129,25 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title ,description,icon}) =>
                       }`}
                     />
                   ))}
-                </div> )}
-              </>
-            ) : (
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="relative w-full h-full">
               <img
                 src={imageUrl}
                 alt={`Image ${imageIndex + 1}`}
                 className="w-full h-full object-cover rounded-lg"
-                 width="350"
-  height="200"
+                width="350"
+                height="200"
+                loading="lazy"
+                onLoad={(e) => e.target.classList.add('loaded')}
               />
+              <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+            </div>
+          )}
+        </div>
             )}
-          </div>
-        )}
       </div>
 
      

@@ -170,6 +170,13 @@ a {
 
 
 
+img:not(.loaded) + .img-skeleton {
+  display: block;
+}
+
+img.loaded + .img-skeleton {
+  display: none;
+}
 
 
 

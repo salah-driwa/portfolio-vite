@@ -1,6 +1,14 @@
-import img1 from "./img1.png"
-import img2 from './cinemaPlus.png'
-import img3 from './angular project.png'
+import img1 from "./imges/img1.png"
+import img2 from './imges/cinemaPlus.png'
+import img3 from './imges/angular project.png'
+import img4 from './imges/leagueoflegendclient.jpg'; // Replace 'your-image4.png' with the actual image file name
+import img5 from './imges/3dcarimg.png'; // Add the images accordingly
+import img6 from './imges/discordclone.png'; // Replace 'your-image4.png' with the actual image file name
+import img7 from './imges/dashboard1.png'; // Add the images accordingly
+import img8 from './imges/dashboard2.png'; // Replace 'your-image4.png' with the actual image file name
+import img9 from './imges/healthdashboard.png'; // Add the images accordingly
+import img10 from './imges/spotifyclone.png'; // Replace 'your-image4.png' with the actual image file name
+import img11 from './imges/watchanime.png'; // Add the images accordingly
 
 
 const DevelopmentProject = [
@@ -10,7 +18,7 @@ const DevelopmentProject = [
     title: "League of Legends Champions List",
     description: "A sleek dashboard for managing and discovering music, with playlists and user preferences integrated.",
     link: "https://leagueoflegend-client.netlify.app",
-    img: "https://cdn.dribbble.com/userupload/11388274/file/original-8e0f69bb1185326935fce7b31fbafbc8.jpg?resize=1024x768&vertical=center",
+    img:img4,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
     { 
@@ -21,7 +29,7 @@ const DevelopmentProject = [
     tags: ["#React"],
     link: "https://3dcarshop.netlify.app/",
     icons: [7, 8, 6, 5],
-    img:[ "https://mir-s3-cdn-cf.behance.net/project_modules/fs/ee4556212857297.673c7bc2e83f7.png" ],
+    img:[ img5 ],
   url:"https://cdn.dribbble.com/userupload/15760882/file/original-bdac76de0787bb531672fe711223b801.mp4",
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
@@ -42,7 +50,7 @@ const DevelopmentProject = [
     title: "Discord Clone",
     description: "A clone of the popular messaging platform, Discord, replicating core features like server-based chat.",
     link: "https://discord-clone12.netlify.app/",
-    img: "https://cdn.dribbble.com/userupload/14785078/file/original-e0412c4a7f985fc28b5c5418807cc427.png?resize=1600x1200",
+    img: img6,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
   { 
@@ -61,7 +69,7 @@ const DevelopmentProject = [
     title: "Invoice Management Dashboard",
     description: "A dashboard designed to manage invoices efficiently with intuitive graphs and reports.",
     link: "https://dashboard-exemples.netlify.app/dashboard",
-    img: "https://cdn.dribbble.com/userupload/11811535/file/original-77173e3528d7e9a0b554f9e1c8ffc339.png?resize=1024x768",
+    img: img7,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
   {
@@ -69,7 +77,7 @@ const DevelopmentProject = [
     title: "Storeshop - Dashboard",
     description: "A modern dashboard offering insights and analytics for online stores with interactive charts.",
     link: "https://dashboard-exemples.netlify.app/dashboard2",
-    img: "https://cdn.dribbble.com/userupload/10748017/file/original-97ff7cb94cd567b53e39fc7cb238ee6d.png?resize=1024x768",
+    img: img8,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
   {
@@ -77,7 +85,7 @@ const DevelopmentProject = [
     title: "Health Tracker Dashboard",
     description: "A health-focused dashboard to monitor personal fitness metrics like steps, calories, and workouts.",
     link: "https://dashboard-exemples.netlify.app/dashboard3",
-    img: "https://cdn.dribbble.com/userupload/10078496/file/original-263868fe956798afc77f8beff0255c84.png?resize=752x564&vertical=center",
+    img: img9,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
 
@@ -97,7 +105,7 @@ const DevelopmentProject = [
     title: "Streaming Platform",
     description: "A streaming website built for anime lovers, featuring sections like 'Continue Watching' and trending shows.",
     link: "https://w-anime.netlify.app/",
-    img: "https://cdn.dribbble.com/userupload/8811119/file/original-0a7108bf8884a0bd730ebfda69bec178.png?resize=1024x768&vertical=center",
+    img: img11,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
   {
@@ -105,7 +113,7 @@ const DevelopmentProject = [
     title: "Music Streaming Web Dashboard",
     description: "A sleek dashboard for managing and discovering music, with playlists and user preferences integrated.",
     link: "https://dashboard-exemples.netlify.app/musicDashboard",
-    img: "https://cdn.dribbble.com/userupload/10197915/file/original-54d09f49bd7ac66da46995a5ff1ab7ce.png?resize=1024x768&vertical=center",
+    img: img10,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   }
 ];
