@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaPlay } from "react-icons/fa";
 import ReactPlayer from "react-player"; 
 import { motion } from "framer-motion";
@@ -35,6 +35,15 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
     setImageIndex(index);
   };
 
+    // Preload images
+    useEffect(() => {
+      if (Array.isArray(imageUrl)) {
+        imageUrl.forEach((src) => {
+          const img = new Image();
+          img.src = src; // Preload image
+        });
+      }
+    }, [imageUrl]);
   // Handle video loading state
   const handleVideoReady = () => {
     setIsVideoLoading(false);  // Video is ready, hide the spinner
@@ -106,52 +115,54 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
               </div>
             ) : (
               <div className="h-full">
-                {Array.isArray(imageUrl) && imageUrl.length > 1 ? (
-                  <>
-                    <div className="relative w-full h-full">
-                      <motion.img
-                      key={imageIndex}
-                       src={imageUrl[imageIndex]}
-                       alt={`Image ${imageIndex + 1}`}
-                       className="w-full h-full object-cover rounded-lg"
-                       width="350"
-                       height="200"
-                       loading="lazy"
-                       initial={{ opacity: 0 , x:10}}  // Start with invisible image
-                       animate={{ opacity: 1, x:0 }}   // Fade in effect
-                       exit={{ opacity: 0 }}      // Fade out effect when exiting
-                       transition={{ opacity: { duration: 1 } }} // Set fade duration
-                       onLoad={(e) => e.target.classList.add("loaded")}
-                      />
-                      <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
-                    </div>
+               {Array.isArray(imageUrl) && imageUrl.length > 1 ? (
+        <>
+          <div className="relative w-full h-full">
+            <motion.img
+              key={imageIndex}
+              src={imageUrl[imageIndex]}
+              alt={`Image ${imageIndex + 1}`}
+              className="w-full h-full object-cover rounded-lg"
+              width="350"
+              height="200"
+              loading="lazy"
+              initial={{ opacity: 0, x: 10 }} // Start with invisible image
+              animate={{ opacity: 1, x: 0 }}   // Fade in effect
+              exit={{ opacity: 0 }}            // Fade out effect when exiting
+              transition={{ opacity: { duration: 1 } }} // Set fade duration
+              onLoad={(e) => e.target.classList.add("loaded")}
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+          </div>
 
-                    {isHovered && (
-                      <div className="absolute buttom-10  left-1/2 z-50 transform -translate-x-1/2 flex space-x-2">
-                        {imageUrl.map((_, index) => (
-                          <button
-                            key={index}
-                            onClick={(event) => selectImage(index, event)}
-                            className={`w-2 h-2 rounded-full ${index === imageIndex ? "bg-blue-500" : "bg-gray-300"}`}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <div className="relative w-full h-full">
-                    <img
-                      src={imageUrl}
-                      alt={`Image ${imageIndex + 1}`}
-                      className="w-full h-full object-cover rounded-lg"
-                      width="350"
-                      height="200"
-                      loading="lazy"
-                      onLoad={(e) => e.target.classList.add('loaded')}
-                    />
-                    <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
-                  </div>
-                )}
+          {isHovered && (
+            <div className="absolute bottom-10 left-1/2 z-50 transform -translate-x-1/2 flex space-x-2">
+              {imageUrl.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={(event) => selectImage(index, event)}
+                  className={`w-2 h-2 rounded-full ${
+                    index === imageIndex ? "bg-blue-500" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="relative w-full h-full">
+          <img
+            src={imageUrl}
+            alt={`Image ${imageIndex + 1}`}
+            className="w-full h-full object-cover rounded-lg"
+            width="350"
+            height="200"
+            loading="lazy"
+            onLoad={(e) => e.target.classList.add("loaded")}
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+        </div>
+      )}
               </div>
             )}
           </div>
