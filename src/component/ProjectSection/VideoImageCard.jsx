@@ -132,11 +132,13 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
               transition={{ opacity: { duration: 1 } }} // Set fade duration
               onLoad={(e) => e.target.classList.add("loaded")}
             />
-            <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+          {imageIndex === 0 && (
+        <div className="absolute top-0 left-0 w-full h-full bg-gray-200 animate-pulse rounded-lg img-skeleton"></div>
+      )}
           </div>
 
           {isHovered && (
-            <div className="absolute bottom-10 left-1/2 z-50 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-6 left-1/2 z-50 transform -translate-x-1/2 flex space-x-2">
               {imageUrl.map((_, index) => (
                 <button
                   key={index}
@@ -168,25 +170,32 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
           </div>
         </a>
 
-        {Array.isArray(imageUrl) && imageUrl.length > 1 && isHovered ? (
-          <div className="h-full">
-            <button
-              onClick={prevImage}
-              className="absolute left-12 top-36 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full"
-            >
-              <FaArrowLeft className="text-white" />
-            </button>
+                                {Array.isArray(imageUrl) && imageUrl.length > 1 && isHovered ? (
+                          <div className="h-full">
+                            {/* Show 'previous' button only if there is a previous image */}
+                            {imageIndex > 0 && (
+                              <button
+                                onClick={prevImage}
+                                className="absolute left-12 top-36 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full"
+                              >
+                                <FaArrowLeft className="text-white" />
+                              </button>
+                            )}
 
-            <button
-              onClick={nextImage}
-              className="absolute right-12 top-36 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full"
-            >
-              <FaArrowRight className="text-white" />
-            </button>
-          </div>
-        ) : (
-          <></>
-        )}
+                            {/* Show 'next' button only if there is a next image */}
+                            {imageIndex < imageUrl.length - 1 && (
+                              <button
+                                onClick={nextImage}
+                                className="absolute right-12 top-36 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full"
+                              >
+                                <FaArrowRight className="text-white" />
+                              </button>
+                            )}
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+
       </div>
       <div className="flex h-20 gap-4 sm:justify-start sm:items-start sm:align-top w-10/12 mx-auto justify-center align-middle items-center max-w-96 sm:mt-3">
         <img src={icon} alt="" className="size-12 object-contain my-auto bg-white rounded-2xl" />
