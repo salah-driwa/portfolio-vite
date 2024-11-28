@@ -19,7 +19,7 @@ const DevelopmentProject = [
     title: "3D Car Shop",
     description: "Explore a cutting-edge 3D car shop powered by Three.js, offering an immersive experience where you can view, customize, and interact with vehicles in real-time 3D. Perfect for showcasing modern car designs and enhancing user engagement.",
     tags: ["#React"],
-    link: "https://cinemaplus1.netlify.app/",
+    link: "https://3dcarshop.netlify.app/",
     icons: [7, 8, 6, 5],
     img:[ "https://mir-s3-cdn-cf.behance.net/project_modules/fs/ee4556212857297.673c7bc2e83f7.png" ],
   url:"https://cdn.dribbble.com/userupload/15760882/file/original-bdac76de0787bb531672fe711223b801.mp4",
