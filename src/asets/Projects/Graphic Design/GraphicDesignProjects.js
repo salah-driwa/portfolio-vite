@@ -21,6 +21,14 @@ import ramiCaffe2 from './images/1129ec212769255.673b2b2050c52.jpg';
 import ramiCaffe3 from './images/e3cba5212769255.673b2b204ec83.jpg';
 import ramiCaffe4 from './images/ee5757212769255.673b2b204fd37.jpg';
 import ramiCaffe5 from './images/838f73212769255.673b2b2050261.jpg';
+import SocailmediaPoster1 from './images/Layer 7.jpg'
+import SocailmediaPoster2 from './images/Layer 8.jpg'
+import SocailmediaPoster3 from './images/Layer 9.jpg'
+import SocailmediaPoster4 from './images/Layer 12.jpg'
+import SocailmediaPoster5 from './images/Layer 13.jpg'
+import SocailmediaPoster6 from './images/Layer 14.jpg'
+import SocailmediaPoster7 from './images/Layer 15.jpg'
+import SocailmediaPoster8 from './images/Social Media Mockup.jpg'
 
 const GraphicDesignProjects = [
   {
@@ -72,6 +80,26 @@ const GraphicDesignProjects = [
     icons: [3, 4],
     icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
     img: [ramiCaffe1, ramiCaffe2, ramiCaffe3, ramiCaffe4, ramiCaffe5],
+  },
+  {
+    title: "Real-State Social media posters ",
+    description:
+      "A dynamic collection of real estate social media posters, featuring sleek designs for property listings, audiences—explore more on Behance!",
+    tags: ["#LogoDesign", "#Typography", "#AbstractArt", "#Modern", "#Mascot"],
+    link: "https://www.behance.net/gallery/215895751/Real-State-Social-media-Posters",
+    icons: [3, 4],
+    icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
+    img: [SocailmediaPoster2,SocailmediaPoster1,SocailmediaPoster3],
+  },
+  {
+    title: "Social Media Post ",
+    description:
+      "A dynamic collection of real estate social media posters, featuring sleek designs for property listings, open houses,  audiences—explore more on Behance!",
+    tags: ["#LogoDesign", "#Typography", "#AbstractArt", "#Modern", "#Mascot"],
+    link: "https://www.behance.net/gallery/215895433/Social-Media-Post",
+    icons: [3, 4],
+    icon: "https://thumbs.dreamstime.com/b/behance-icon-logo-beautiful-meticulously-designed-225149217.jpg",
+    img: [SocailmediaPoster8,SocailmediaPoster4,SocailmediaPoster5,SocailmediaPoster6,SocailmediaPoster7],
   },
 ];
 
