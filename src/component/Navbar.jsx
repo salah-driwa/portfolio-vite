@@ -6,6 +6,9 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Section from './Section_animation';
+import { useLocation } from 'react-router-dom'; // Import useLocation
+
+
 
 const NAV_ITEMS = [
   { name: 'Home', icon: <FaHome />, path: '/', animation: { y: -5 } },
@@ -21,6 +24,7 @@ const Navbar = () => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'dark'; // Initialize state based on localStorage
   });
+  const location = useLocation(); // Get current route
 
   const toggleTheme = () => {
     const newTheme = isDark ? 'light' : 'dark';
@@ -57,18 +61,18 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`sm:flex items-center justify-between fixed w-full h-fit sm:h-20 text-secondary-button z-50 
-        sm:py-4 sm:px-20  border-opacity-50 `}
+    className={`sm:flex items-center justify-between fixed w-full h-fit sm:h-20 text-secondary-button z-50 
+      sm:py-4 sm:px-20 border-opacity-50 bg-gradient-to-t from-transparent to-[var(--accent)]`}
+  
       initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
       animate={{
-        backgroundColor: isScrolled ? 'var(--accent)' : 'rgba(0, 0, 0, 0)',
         backdropFilter: isScrolled ? 'blur(8px)' : 'none',
       }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex px-6 py-3 bg-accent sm:bg-transparent">
         <Section x={0} y={-40}>
-          <Link to="/" onClick={() => setIsHovered({})} className="flex items-center">
+          <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
             <h1 className="sm:text-2xl font-bold text-text">Portfolio</h1>
           </Link>
         </Section>
@@ -85,30 +89,36 @@ const Navbar = () => {
           {isDark ? <FaSun size={26} color="black" /> : <FaMoon size={26} color="white" />}
         </motion.button>
 
-        {NAV_ITEMS.map(({ name, icon, path, animation }, index) => (
-          <motion.div
-            key={name}
-            custom={index}  // Custom prop to stagger each item's appearance
-            initial="hidden"
-            animate="visible"
-            variants={navItemVariants}
-            className="flex"
-          >
-            <Link
-              to={path}
-              onMouseEnter={() => handleHover(name)}
-              onMouseLeave={() => handleHover(name)}
-              className={`flex items-center space-x-2 cursor-pointer hover:font-semibold ${
-                isHovered[name] ? 'text-primary' : ''
-              }`}
-            >
-              <motion.div className=' text-text' animate={isHovered[name] ? animation : {}}>
-                {icon}
-              </motion.div>
-              <span className=' text-text'>{name} </span>
-            </Link>
-          </motion.div>
-        ))}
+        {NAV_ITEMS.map(({ name, icon, path, animation }, index) => {
+  const isActive = location.pathname === '/' + path || (location.pathname === '/' && path === '/'); // Ensure matching
+
+  return (
+    <motion.div
+      key={name}
+      custom={index}
+      initial="hidden"
+      animate="visible"
+      variants={navItemVariants}
+      className="flex"
+    >
+      <Link
+        to={path}
+        onMouseEnter={() => handleHover(name)}
+        onMouseLeave={() => handleHover(name)}
+        className={`flex items-center  space-x-2 cursor-pointer font-semibold ${
+          isHovered[name] ? ' ' : ''
+        } ${isActive ? 'border-b-2 border-primary text-text ' : '  text-text'}`}
+      >
+        <motion.div className={` ${isActive ? '' : ' '}  `} animate={isHovered[name] ? animation : {}}>
+          {icon}
+        </motion.div>
+        <span className="">{name}</span>
+      </Link>
+    </motion.div>
+  );
+})}
+
+
       </div>
     </motion.nav>
   );

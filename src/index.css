@@ -84,14 +84,14 @@ body::-webkit-scrollbar-thumb {
     --background: #dddcdc;
     --primary: #10afff;
     --secondary: #205671;
-    --accent: #ececec;
+    --accent: #bdeaf286;
   }
 .dark {
   --text: #ffffff;
   --background: #13131a;
-  --primary: #05bcff;
+  --primary: #00bbff;
   --secondary: #47c2ff;
-  --accent: #198cab;
+  --accent: #2389a4;
 }
 .text-gray-300 {
   stroke: #e2e8f0; /* Light gray */

@@ -13,12 +13,13 @@ export default function Button() {
 
 
   return (
-    <div className="h-full">
+    <div className="h-full z-50">
      <RiveComponent 
     style={{ height: "100%"  ,position :"relative" }}
   
    
   />
+  
    </div>
   );
 }
