@@ -83,7 +83,7 @@ const Navbar = () => {
         <motion.button
           whileHover={{ scale: 1.2, rotate: 360 }}
           onClick={toggleTheme}
-          className={`absolute rounded-full w-10 h-10 flex items-center justify-center ${
+          className={`absolute  text-text rounded-full w-10 h-10 flex items-center justify-center ${
             isDark ? 'bg-white' : 'bg-black'
           }`}
         >
@@ -106,7 +106,7 @@ const Navbar = () => {
   to={path}
   onMouseEnter={() => handleHover(name)}
   onMouseLeave={() => handleHover(name)}
-  className={`flex items-center space-x-2 cursor-pointer font-small-display font-normal
+  className={`flex items-center space-x-2 text-text cursor-pointer font-small-display font-normal
     ${isActive ? 'border-b-2 border-primary text-text opacity-100' : ''}
     ${isHovered[name] ? 'opacity-100 scale-110' : ''}
     ${!isActive && !isHovered[name] ? 'opacity-60' : ''}`
