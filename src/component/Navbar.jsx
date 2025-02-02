@@ -62,14 +62,14 @@ const Navbar = () => {
   return (
     <motion.nav
     className={`sm:flex items-center justify-between fixed w-full h-fit sm:h-20 text-secondary-button z-50 
-      sm:py-4 sm:px-20 border-opacity-50 bg-primary bg-gradient-to-b from-blue-400/20 light:from-gray-500 to-transparent`}
+      sm:py-4 sm:px-20 border-opacity-50  bg-gradient-to-b dark:from-blue-400/20 light:from-gray-500 light:to-transparent dark:to-transparent`}
   
       animate={{
         backdropFilter: isScrolled ? 'blur(8px)' : 'none',
       }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex px-6 py-3 relative bg-accent sm:bg-transparent">
+      <div className="flex px-6 py-3 relative  sm:bg-transparent">
         <Section x={0} y={-40}>
         <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
   <img src={isDark ?Logo :LogoLight} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
