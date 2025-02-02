@@ -33,11 +33,11 @@ function ProjectSection({digitalIllustration, images2, Logos, Website, games,Ani
   return (
     <body className="  w-full mb-36  ">
       {/* Scrollable Tabs */}
-      <div className="flex gap-3 px-4 py-2 w-screen overflow-x-auto custom-scrollbar justify-start">
+      <div className="flex gap-3  py-2  w-screen overflow-x-auto custom-scrollbar justify-start">
         {tabs.map((tab) => (
           <button
             key={tab.name}
-            className={`flex items-center  gap-2 px-4 py-2 
+            className={`flex items-center  font-small-display gap-2 px-4 py-2 
               ${activeTab === tab.name ? 'border-b-2 dark:border-white border-black' : 'text-gray-500'}`}
             onClick={() => handleTabChange(tab.name)}
           >

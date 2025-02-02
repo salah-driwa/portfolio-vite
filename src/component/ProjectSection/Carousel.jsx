@@ -18,9 +18,9 @@ const Carousel = ({ datas }) => {
   };
 
   return (
-    <section className="bg-lightbg p-3 rounded-xl flex justify-center flex-col items-center">
+    <section className="bg-lightbg sm:p-3   pt-5 rounded-xl flex justify-center flex-col items-center">
       <div className="flex justify-center items-center align-middle mx-auto">
-        <div className="flex flex-wrap gap-10 sm:gap-6 sm:items-start justify-center items-center align-middle w-full max-w-10xl mx-auto">
+        <div className="flex flex-wrap   gap-10 sm:gap-6 sm:items-start justify-center items-center align-middle w-full max-w-10xl mx-auto">
           {datas.map((data, index) => (
             <motion.div
               key={index}

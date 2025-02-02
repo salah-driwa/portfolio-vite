@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700,500,400&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=Satoshi@700,300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,6 +65,7 @@ body::-webkit-scrollbar-thumb {
                      var(--sb-track-color);
   }
 }
+/* You can also add transitions to other color-changing properties */
 
  :root {
 
@@ -71,27 +74,29 @@ body::-webkit-scrollbar-thumb {
     --sb-track-color: #272e31;
   --sb-thumb-color: #00a6ff;
   --sb-size: 3px;
+  transition: background-color 0.5s ease, color 0.5s ease;
   
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #161616;
+    background-color: var(--background);
+
   
     font-synthesis: none;
   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --text: #212529;
-    --background: #dddcdc;
+    --background: #f7f8faee;
     --primary: #10afff;
     --secondary: #205671;
-    --accent: #bdeaf286;
+    --accent: #ffffff;
   }
 .dark {
   --text: #ffffff;
   --background: #13131a;
   --primary: #00bbff;
   --secondary: #47c2ff;
-  --accent: #2389a4;
+  --accent: #1b2634c3;
 }
 .text-gray-300 {
   stroke: #e2e8f0; /* Light gray */
@@ -121,7 +126,6 @@ a {
 	
 }
 
-
 .blob {
   position: absolute;
   width: 300px;
@@ -130,9 +134,20 @@ a {
   opacity: 0.7;
   border-radius: 20%;
   filter: blur(240px);
-  animation: blob-animation 6s infinite alternate;
+  animation: blob-animation 6s infinite alternate, blob-color-transition 6s infinite alternate;
 }
 
+@keyframes blob-color-transition {
+  0% {
+      background-color: var(--primary);
+  }
+  50% {
+      background-color: var(--secondary);
+  }
+  100% {
+      background-color: var(--accent);
+  }
+}
 .blob-left {
 
   left: 50px;

@@ -201,18 +201,18 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
         <img src={icon} alt="" className="size-12 object-contain my-auto bg-white rounded-2xl" />
         <div className="flex flex-col items-start justify-start align-top relative w-9/12">
           {/* Title */}
-          <h1 className="text-left text-primary font-bold text-nowrap font-mono text-lg mt-2 truncate w-full overflow-hidden" style={{ whiteSpace: "nowrap" }}>
+          <h1 className="text-left text-primary font-medium text-nowrap  font-clash-display text-lg mt-2 truncate w-full overflow-hidden" style={{ whiteSpace: "nowrap" }}>
             {title}
           </h1>
 
           {/* Description */}
-          <h1 className="text-left text-text max-w-full font-mono font-thin text-sm opacity-70 mt-2 truncate w-full overflow-hidden" style={{ whiteSpace: "nowrap" }}>
+          <h1 className="text-left text-text max-w-full  font-small-display font-thin text-sm opacity-70 mt-2 truncate w-full overflow-hidden" style={{ whiteSpace: "nowrap" }}>
             {description}
           </h1>
 
           {/* Popup */}
           {isHovered && (
-            <div className="absolute left-0 top-full mt-2 bg-black/80 text-white p-3 rounded-lg shadow-lg z-[200] w-72">
+            <div className="absolute left-0 font-small-display top-full mt-2 bg-black/80 text-white p-3 rounded-lg shadow-lg z-[200] w-72">
               <p className="text-sm font-mono font-thin">{description}</p>
             </div>
           )}

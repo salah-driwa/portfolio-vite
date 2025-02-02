@@ -1,5 +1,6 @@
 
 import Content from './component/Content.jsx';
+import Footer from './component/Footer.jsx';
 //import Dragon from './component/rive/Dragons.js';
 
 import Herosection from './component/Herosection.jsx';
@@ -30,7 +31,7 @@ function Home() {
    
              <Content />
   
-
+             <Footer />
      </div>    
     
     );

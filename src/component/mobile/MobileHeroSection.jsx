@@ -65,7 +65,7 @@ const MobileHeroSection = () => {
         </motion.div>
       </motion.div>
 
-      <h1 className="text-3xl font-bold mb-6 text-light-primary text-center dark:text-dark-primary">
+      <h1 className="text-3xl font-clash-display font-bold mb-6 text-light-primary text-center dark:text-dark-primary">
         What Are You Looking For?
       </h1>
 
@@ -74,7 +74,7 @@ const MobileHeroSection = () => {
           <motion.div
             key={index}
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-lg 
-              cursor-pointer transition-colors duration-300"
+              cursor-pointer transition-colors font-small-display duration-300"
             style={{ backgroundColor: option.bgColor }}
             onClick={() => handleClick(option.link)}
             initial={{ opacity: 0, y: 20 }}

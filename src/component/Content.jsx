@@ -2,10 +2,11 @@ import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Programmer from './IntroductionSection/Programmer';
 import Description from './IntroductionSection/Descrption';
-import Footer from './Footer';
+
 import Section from './Section_animation';
 import Rive from './rive/Rive';
 import SectionCard from './IntroductionSection/SectionCard';
+import ShinyText from "./ShinyText";
 
 const Content = () => {
   useEffect(() => {
@@ -27,7 +28,9 @@ const Content = () => {
         craft innovative web development, stunning designs, and creative art
         solutions to elevate your brand.
       </h1>
-      <h1 className="text-center text-secondary font-bold text-3xl pb-10 pt-2">Interactive UI</h1>
+
+      <h1 className="text-center text-secondary font-clash-display   font-semibold text-3xl pb-10 pt-2">   <ShinyText text="Interactive UI" disabled={false} speed={2} className='text-4xl    mb-3 uppercase  font-clash-display   font-bold' />
+     </h1>
 
       {/* Cards Section */}
       <section
@@ -65,7 +68,7 @@ const Content = () => {
         </motion.div>
       </section>
 
-      <Footer />
+ 
     </div>
   );
 };

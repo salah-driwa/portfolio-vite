@@ -5,6 +5,7 @@ import Section from "../../component/Section_animation";
 import Description from "../../component/IntroductionSection/Descrption";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Footer from "../../component/Footer";
 
 function Index() {
   const sectionRef = useRef(null);
@@ -13,24 +14,24 @@ function Index() {
   const isInView = useInView(sectionRef, { once: true });
 
   return (
-    <div className="-mt-36">
+    <div className=" mt-36">
       <Section x={0} y={-100}>
         <Description />
       </Section>
-      <h1 className="text-center w-10/12    mx-auto mb-3 text-md lg:mx-auto text-text   font-normal lg:text-xl   mt-2 lg:w-1/2">
+      <h1 className="text-center w-10/12  font-small-display   mx-auto mb-3 text-md lg:mx-auto text-text   font-normal lg:text-xl   mt-2 lg:w-1/2">
         Welcome to <span className="text-primary  font-semibold">TrueDark</span>, where we
         craft innovative web development, stunning designs, and creative art
         solutions to elevate your brand.
       </h1>
 
-      <h1 className="text-center text-secondary font-bold text-3xl uppercase pb-10 pt-2">
+      <h1 className="text-center font-clash-display text-secondary  text-3xl uppercase pb-10 pt-5">
         Click to Interact
       </h1>
 
       {/* Cards Section */}
       <section
         ref={sectionRef}
-        className="flex justify-center items-center mx-3 gap-4 md:flex-row xl:mx-80 mb-5"
+        className="flex justify-center  mb-10 items-center mx-3 gap-4 md:flex-row  "
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,6 +63,7 @@ function Index() {
           />
         </motion.div>
       </section>
+      <Footer />
     </div>
   );
 }

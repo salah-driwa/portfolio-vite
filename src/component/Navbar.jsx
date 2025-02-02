@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Section from './Section_animation';
 import { useLocation } from 'react-router-dom'; // Import useLocation
-
+import    Logo  from '../assets/LogoSvg.svg';
 
 
 const NAV_ITEMS = [
@@ -70,11 +70,13 @@ const Navbar = () => {
       }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex px-6 py-3 bg-accent sm:bg-transparent">
+      <div className="flex px-6 py-3 relative bg-accent sm:bg-transparent">
         <Section x={0} y={-40}>
-          <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
-            <h1 className="sm:text-2xl font-bold text-text">Portfolio</h1>
-          </Link>
+        <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
+  <img src={Logo} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
+  {isHovered ? <img src={Logo} className={`w-36 h-16 blur-2xl top-0 absolute transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} /> : ""}
+</Link>
+
         </Section>
       </div>
 
@@ -105,11 +107,11 @@ const Navbar = () => {
         to={path}
         onMouseEnter={() => handleHover(name)}
         onMouseLeave={() => handleHover(name)}
-        className={`flex items-center  space-x-2 cursor-pointer font-semibold ${
-          isHovered[name] ? ' ' : ''
-        } ${isActive ? 'border-b-2 border-primary text-text ' : '  text-text'}`}
+        className={`flex items-center  space-x-2 cursor-pointer font-small-display font-normal ${
+          isHovered[name] ? ' opacity-100 scale-110 ' : ''
+        } ${isActive ? 'border-b-2 border-primary text-text  ' : '  text-text opacity-50'}`}
       >
-        <motion.div className={` ${isActive ? '' : ' '}  `} animate={isHovered[name] ? animation : {}}>
+        <motion.div className={` ${isActive ? '' : '  '}  `} animate={isHovered[name] ? animation : {}}>
           {icon}
         </motion.div>
         <span className="">{name}</span>

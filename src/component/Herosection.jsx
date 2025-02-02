@@ -21,16 +21,19 @@ function Herosection() {
         animate={{
           scale: isHovered ? 0 : [0, 1.3, 0.9, 1.1, 1],
           x: [0, 0, 10, -10, 10, 0],
-          y: [-30, 0, -30, 15, -30, 0],
+          y: [-100, -50, -100, -58, -80, -50]
+
+
+,
           transition: {
             x: { repeat: Infinity, duration: 8 },
             y: { repeat: Infinity, duration: 8, repeatType: 'reverse' },
           },
         }}
         transition={{ duration: 1, bounce: 50 }}
-        className="absolute top-1/2 text-3xl text-text font-extrabold z-20"
+        className="absolute font-clash-display   top-1/2 text-5xl text-text  z-20"
       >
-        Looking for?
+        Looking for ?
       </motion.div>
 
       <div className="relative w-full h-full">
