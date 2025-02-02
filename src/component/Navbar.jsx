@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import Section from './Section_animation';
 import { useLocation } from 'react-router-dom'; // Import useLocation
 import    Logo  from '../assets/LogoSvg.svg';
-
+import LogoLight  from '../assets/LogoSvgLight.svg';
 
 const NAV_ITEMS = [
   { name: 'Home', icon: <FaHome />, path: '/', animation: { y: -5 } },
@@ -62,9 +62,8 @@ const Navbar = () => {
   return (
     <motion.nav
     className={`sm:flex items-center justify-between fixed w-full h-fit sm:h-20 text-secondary-button z-50 
-      sm:py-4 sm:px-20 border-opacity-50 bg-gradient-to-t from-transparent to-[var(--accent)]`}
+      sm:py-4 sm:px-20 border-opacity-50 bg-primary bg-gradient-to-b from-blue-400/20 light:from-gray-500 to-transparent`}
   
-      initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
       animate={{
         backdropFilter: isScrolled ? 'blur(8px)' : 'none',
       }}
@@ -73,7 +72,7 @@ const Navbar = () => {
       <div className="flex px-6 py-3 relative bg-accent sm:bg-transparent">
         <Section x={0} y={-40}>
         <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
-  <img src={Logo} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
+  <img src={isDark ?Logo :LogoLight} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
   {isHovered ? <img src={Logo} className={`w-36 h-16 blur-2xl top-0 absolute transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} /> : ""}
 </Link>
 
@@ -103,14 +102,16 @@ const Navbar = () => {
       variants={navItemVariants}
       className="flex"
     >
-      <Link
-        to={path}
-        onMouseEnter={() => handleHover(name)}
-        onMouseLeave={() => handleHover(name)}
-        className={`flex items-center  space-x-2 cursor-pointer font-small-display font-normal ${
-          isHovered[name] ? ' opacity-100 scale-110 ' : ''
-        } ${isActive ? 'border-b-2 border-primary text-text  ' : '  text-text opacity-50'}`}
-      >
+   <Link
+  to={path}
+  onMouseEnter={() => handleHover(name)}
+  onMouseLeave={() => handleHover(name)}
+  className={`flex items-center space-x-2 cursor-pointer font-small-display font-normal
+    ${isActive ? 'border-b-2 border-primary text-text opacity-100' : ''}
+    ${isHovered[name] ? 'opacity-100 scale-110' : ''}
+    ${!isActive && !isHovered[name] ? 'opacity-60' : ''}`
+  }
+>
         <motion.div className={` ${isActive ? '' : '  '}  `} animate={isHovered[name] ? animation : {}}>
           {icon}
         </motion.div>
