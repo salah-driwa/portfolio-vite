@@ -6,6 +6,7 @@ import MobileNavigation from './component/mobile/MobileNavigation.jsx';
 import { Suspense } from 'react';
 import Navbar from './component/Navbar.jsx';
 import { motion } from "framer-motion";
+import LoadingBar from './component/LoadingBar.jsx';
 
 
 
@@ -37,7 +38,7 @@ const App = () => {
   return (
 
       <div className=' min-h-screen '>
-      
+      <LoadingBar />
        <Suspense fallback={<Spinner />}>
        <Navbar />
         <div className=" bg-background text-text min-h-screen relative overflow-hidden w-full flex items-center justify-center">

@@ -29,7 +29,8 @@ const Content = () => {
         solutions to elevate your brand.
       </h1>
 
-      <h1 className="text-center text-secondary font-clash-display   font-semibold text-3xl pb-10 pt-2">   <ShinyText text="Interactive UI" disabled={false} speed={2} className='text-4xl    mb-3 uppercase  font-clash-display   font-bold' />
+      <h1 className="text-center text-secondary font-clash-display   font-semibold text-3xl pb-10 pt-2">  
+         <ShinyText text="Interactive UI" disabled={false} speed={2} className='text-4xl    mb-3 uppercase  font-clash-display   font-bold' />
      </h1>
 
       {/* Cards Section */}
