@@ -1,5 +1,5 @@
-import img1 from "./img1.png";
-import img2 from "./img2.png";
+import img1 from "./game 2.jpg";
+import img2 from "./game 1.jpg";
 import vd1 from "../../../assets/video/Game Matching.mp4"
 import vd2 from "../../../assets/video/game 2.mp4"
 const games = [
