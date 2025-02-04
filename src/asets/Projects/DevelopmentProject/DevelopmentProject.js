@@ -1,14 +1,14 @@
-import img1 from "./images/img1.png"
-import img2 from './images/cinemaPlus.png'
-import img3 from './images/angular project.png'
-import img4 from './images/leagueoflegendclient.jpg'; // Replace 'your-image4.png' with the actual image file name
-import img5 from './images/3dcarimg.png'; // Add the images accordingly
-import img6 from './images/discordclone.png'; // Replace 'your-image4.png' with the actual image file name
-import img7 from './images/dashboard1.png'; // Add the images accordingly
-import img8 from './images/dashboard2.png'; // Replace 'your-image4.png' with the actual image file name
-import img9 from './images/healthdashboard.png'; // Add the images accordingly
-import img10 from './images/spotifyclone.png'; // Replace 'your-image4.png' with the actual image file name
-import img11 from './images/watchanime.png'; // Add the images accordingly
+import img1 from "./images/img1.jpg"
+import img2 from './images/cinemaPlus.jpg'
+import img3 from './images/game store.jpg'
+import img4 from './images/leagueoflegendclient.jpg'; // Replace 'your-image4.jpg' with the actual image file name
+import img5 from './images/3dcarimg.jpg'; // Add the images accordingly
+import img6 from './images/discordclone.jpg'; // Replace 'your-image4.jpg' with the actual image file name
+import img7 from './images/dashboard1.jpg'; // Add the images accordingly
+import img8 from './images/dashboard2.jpg'; // Replace 'your-image4.jpg' with the actual image file name
+import img9 from './images/healthdashboard.jpg'; // Add the images accordingly
+import img10 from './images/spotifyclone.jpg'; // Replace 'your-image4.jpg' with the actual image file name
+import img11 from './images/watchanime.jpg'; // Add the images accordingly
 import vd1 from "../../../assets/video/League of legend  client clone Small.mp4"
 import vd2 from "../../../assets/video/CarStore.mp4"
 import vd3 from "../../../assets/video/MovieSite.mp4"
