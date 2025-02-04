@@ -9,6 +9,7 @@ import img8 from './images/dashboard2.jpg'; // Replace 'your-image4.jpg' with th
 import img9 from './images/healthdashboard.jpg'; // Add the images accordingly
 import img10 from './images/spotifyclone.jpg'; // Replace 'your-image4.jpg' with the actual image file name
 import img11 from './images/watchanime.jpg'; // Add the images accordingly
+import img12 from './images/interactive charater form.jpg'; // Add the images accordingly
 import vd1 from "../../../assets/video/League of legend  client clone Small.mp4"
 import vd2 from "../../../assets/video/CarStore.mp4"
 import vd3 from "../../../assets/video/MovieSite.mp4"
@@ -20,7 +21,7 @@ import vd8 from "../../../assets/video/Dashboard exemple 3.mp4"
 import vd9 from "../../../assets/video/Travel site.mp4"
 import vd10 from "../../../assets/video/anime website.mp4"
 import vd11 from "../../../assets/video/Music Dashboard.mp4"
-
+import vd12 from "../../../assets/video/interactive form with rive.mp4"
 const DevelopmentProject = [
   {
     id: 10,
@@ -30,6 +31,15 @@ const DevelopmentProject = [
     img: img4,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico",
     url: vd1,
+  },
+  {
+    id: 11,
+    title: "Interactive Character",
+    description: "Transforming ordinary interactions into extraordinary experiences with Rive animations.",
+    link: "https://truedarkanimations.netlify.app",
+    img: img12,
+    icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico",
+    url: vd12,
   },
   {
     id: 2,
