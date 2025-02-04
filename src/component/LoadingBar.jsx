@@ -7,6 +7,7 @@ NProgress.configure({ showSpinner: false, speed: 500, minimum: 0.2 });
 
 const LoadingBar = () => {
   const location = useLocation();
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
