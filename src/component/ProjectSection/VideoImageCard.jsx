@@ -84,10 +84,10 @@ const VideoImageCard = ({ videoUrl, imageUrl, link, title, description, icon }) 
             ) : (
               videoUrl && (
                 <div className="absolute top-2 right-3 z-50">
-                  <div className="p-1.5 flex items-center justify-center rounded-full bg-gray-500">
-                    <FaPlay size={16} className="text-white" />
-                  </div>
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-500">
+                  <FaPlay size={16} className="text-white ml-0.5"  />
                 </div>
+              </div>
               )
             )}
 
