@@ -10,6 +10,8 @@ import img9 from './images/healthdashboard.jpg'; // Add the images accordingly
 import img10 from './images/spotifyclone.jpg'; // Replace 'your-image4.jpg' with the actual image file name
 import img11 from './images/watchanime.jpg'; // Add the images accordingly
 import img12 from './images/interactive charater form.jpg'; // Add the images accordingly
+import img14 from './images/shoes-site.jpg'; // Add the images accordingly
+
 import vd1 from "../../../assets/video/League of legend  client clone Small.mp4"
 import vd2 from "../../../assets/video/CarStore.mp4"
 import vd3 from "../../../assets/video/MovieSite.mp4"
@@ -22,6 +24,7 @@ import vd9 from "../../../assets/video/Travel site.mp4"
 import vd10 from "../../../assets/video/anime website.mp4"
 import vd11 from "../../../assets/video/Music Dashboard.mp4"
 import vd12 from "../../../assets/video/interactive form with rive.mp4"
+import vd13 from "../../../assets/video/Shoes-site.mp4"
 const DevelopmentProject = [
   {
     id: 10,
@@ -52,6 +55,19 @@ const DevelopmentProject = [
     url: vd2,
     icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
   },
+  {
+    id: 20,
+    img: img14,
+    title: "Shoes Shop",
+    description:
+      "An engaging hero banner featuring a dynamic slider that showcases trending footwear collections with smooth animations and an interactive design.",
+    tags: ["#React"],
+    link: "https://shoeswebsitehb.netlify.app/",
+    icons: [7, 8, 6, 5],
+    url: vd13,
+    icon: "https://www.shareicon.net/download/2016/07/10/119874_apps.ico"
+  },
+  
   {
     id: 3,
     img: img2,
