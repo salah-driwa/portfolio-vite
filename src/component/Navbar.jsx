@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Section from './Section_animation';
-import { useLocation } from 'react-router-dom'; // Import useLocation
+
 import    Logo  from '../assets/LogoSvg.svg';
 import LogoLight  from '../assets/LogoSvgLight.svg';
 
@@ -22,16 +22,29 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme === 'dark'; // Initialize state based on localStorage
+    return savedTheme === 'dark';
   });
-  const location = useLocation(); // Get current route
 
+  useEffect(() => {
+    const handleThemeChange = () => {
+      const savedTheme = localStorage.getItem('theme');
+      setIsDark(savedTheme === 'dark');
+    };
+
+    // Listen for theme change event
+    window.addEventListener('themeChange', handleThemeChange);
+
+    return () => {
+      window.removeEventListener('themeChange', handleThemeChange);
+    };
+  }, []);
   const toggleTheme = () => {
     const newTheme = isDark ? 'light' : 'dark';
-    setIsDark(newTheme === 'dark');
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
+    setIsDark(newTheme === 'dark');  // Update the state immediately
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');  // Update the class on the document
+    localStorage.setItem('theme', newTheme);  // Save the theme in localStorage
   };
+
 
   useEffect(() => {
     // Ensure the correct theme is applied on load
@@ -42,6 +55,7 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   const handleHover = (name) => setIsHovered((prev) => ({ ...prev, [name]: !prev[name] }));
 
@@ -72,8 +86,10 @@ const Navbar = () => {
       <div className="flex px-6 py-3 relative  sm:bg-transparent">
         <Section x={0} y={-40}>
         <Link to="/" onClick={() => setIsHovered({})} className="flex items-center cursor-pointer">
-  <img src={isDark ?Logo :LogoLight} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
-  {isHovered ? <img src={Logo} className={`w-36 h-16 blur-2xl top-0 absolute transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} /> : ""}
+  <img src={isDark ? Logo :LogoLight} className={`w-36 h-16 transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} />
+  { <img src={Logo} className={`w-36 h-16 blur-2xl top-0 absolute transition-all duration-300 ${isHovered ? "text-blue-500" : "text-white"}`} /> }
+
+  
 </Link>
 
         </Section>

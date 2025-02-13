@@ -2,7 +2,7 @@ import { AiFillAppstore } from "react-icons/ai";
 import { FaHome, FaSun, FaMoon } from "react-icons/fa";
 import { FaInfoCircle, FaStar } from 'react-icons/fa';
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 function MobileNavigation() {
@@ -31,6 +31,8 @@ function MobileNavigation() {
     setIsDark(!isDark);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
+    // Trigger re-render of Navbar
+    window.dispatchEvent(new Event('themeChange'));
   };
 
   const iconVariants = {
@@ -53,6 +55,20 @@ function MobileNavigation() {
     },
     tap: { scale: 0.9 }, // Slight shrink on tap
   };
+
+  useEffect(() => {
+    const handleThemeChange = () => {
+      const savedTheme = localStorage.getItem('theme');
+      setIsDark(savedTheme === 'dark');
+    };
+
+    // Listen for theme change event
+    window.addEventListener('themeChange', handleThemeChange);
+
+    return () => {
+      window.removeEventListener('themeChange', handleThemeChange);
+    };
+  }, []);
 
   return (
     <div className="fixed bottom-0 z-50 h-18 w-10/12 p-3 bg-[var(--text)] flex justify-around gap-2 items-center mb-5 mx-8 rounded-full shadow-lg">
@@ -82,7 +98,6 @@ function MobileNavigation() {
         animate="visible"
         whileHover="hover"
         whileTap="tap"
-     
         custom={navItems.length} // Give it a delayed animation after the other icons
       >
         {isDark ? <FaSun size={20} color="black" /> : <FaMoon size={20} color="white" />}

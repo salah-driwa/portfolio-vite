@@ -56,7 +56,7 @@ const Footer = () => {
 
           </div>
           
-          <div className=" flex items-center my-5  justify-between">
+          <div className=" flex items-center my-5 flex-col sm:flex-row  justify-between">
           <div className="h-fit opacity-50  ">
                   <p className="text-text text-sm">&copy; {new Date().getFullYear()} True Dark. All rights reserved.</p>
               </div>
